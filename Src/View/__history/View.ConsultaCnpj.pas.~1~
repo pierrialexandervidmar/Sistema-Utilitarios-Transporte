@@ -1,0 +1,39 @@
+unit View.ConsultaCnpj;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, REST.Types, REST.Client,
+  Data.Bind.Components, Data.Bind.ObjectScope, Vcl.StdCtrls, Vcl.Menus;
+
+type
+  TConsultaCnpj = class(TForm)
+    Label1: TLabel;
+    EditCnpj: TEdit;
+    MainMenu1: TMainMenu;
+    Configuraes1: TMenuItem;
+    Porta1: TMenuItem;
+    Utilitrios1: TMenuItem;
+    ConsultaCNPJ1: TMenuItem;
+    Sair1: TMenuItem;
+    btnPesquisar: TButton;
+    dados: TMemo;
+    RESTClient1: TRESTClient;
+    RESTRequest1: TRESTRequest;
+    RESTResponse1: TRESTResponse;
+    Button1: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ConsultaCnpj: TConsultaCnpj;
+
+implementation
+
+{$R *.dfm}
+
+end.

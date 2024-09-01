@@ -1,0 +1,65 @@
+object ConsultasMelhorEnvio: TConsultasMelhorEnvio
+  Left = 0
+  Top = 0
+  Caption = 'Consultas Melhor Envio'
+  ClientHeight = 661
+  ClientWidth = 1284
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  KeyPreview = True
+  Position = poMainFormCenter
+  OnKeyDown = FormKeyDown
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 24
+    Top = 16
+    Width = 111
+    Height = 17
+    Caption = 'Listar Companhias'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object BtnConsultarCompanies: TButton
+    Left = 24
+    Top = 37
+    Width = 75
+    Height = 25
+    Caption = 'Consultar'
+    TabOrder = 0
+    OnClick = BtnConsultarCompaniesClick
+  end
+  object DadosCompanies: TMemo
+    Left = 24
+    Top = 68
+    Width = 361
+    Height = 585
+    ScrollBars = ssVertical
+    TabOrder = 1
+  end
+  object RESTClient1: TRESTClient
+    Params = <>
+    SynchronizedEvents = False
+    Left = 136
+    Top = 32
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Params = <>
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 184
+    Top = 32
+  end
+  object RESTResponse1: TRESTResponse
+    Left = 232
+    Top = 32
+  end
+end

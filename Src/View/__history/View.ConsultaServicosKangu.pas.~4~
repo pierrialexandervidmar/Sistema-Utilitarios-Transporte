@@ -1,0 +1,38 @@
+unit View.ConsultaServicosKangu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TConsultaServicosKangu = class(TForm)
+    EditToken: TEdit;
+    Label1: TLabel;
+    DadosRespostaKangu: TMemo;
+    Label2: TLabel;
+    BtnConsultar: TButton;
+    BtnLimpar: TButton;
+    procedure BtnLimparClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ConsultaServicosKangu: TConsultaServicosKangu;
+
+implementation
+
+{$R *.dfm}
+
+procedure TConsultaServicosKangu.BtnLimparClick(Sender: TObject);
+begin
+  EditToken.Clear;
+  DadosRespostaKangu.Clear;
+  EditToken.SetFocus;
+end;
+
+end.

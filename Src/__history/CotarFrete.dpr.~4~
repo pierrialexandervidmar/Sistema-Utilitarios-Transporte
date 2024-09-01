@@ -1,0 +1,18 @@
+program CotarFrete;
+
+uses
+  Vcl.Forms,
+  View.Principal in 'View\View.Principal.pas' {Form1},
+  View.ConsultaCnpj in 'View\View.ConsultaCnpj.pas' {ConsultaCnpj},
+  View.ConsultasMelhorEnvio in 'View\View.ConsultasMelhorEnvio.pas' {ConsultasMelhorEnvio};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TConsultaCnpj, ConsultaCnpj);
+  Application.CreateForm(TConsultasMelhorEnvio, ConsultasMelhorEnvio);
+  Application.Run;
+end.

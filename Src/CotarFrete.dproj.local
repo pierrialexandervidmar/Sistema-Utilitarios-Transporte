@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/08/31 11:26:48.000.293,=C:\Users\pierr\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/31 11:56:20.000.515,C:\projetos\delphi\CotarFretes\Src\View\View.Principal.dfm=C:\Users\pierr\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/08/31 11:56:20.000.515,C:\projetos\delphi\CotarFretes\Src\View\View.Principal.pas=C:\Users\pierr\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/08/31 11:56:30.000.403,C:\projetos\delphi\CotarFretes\Src\CotarFrete.dproj=C:\Users\pierr\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/08/31 13:22:36.000.305,=C:\projetos\delphi\CotarFretes\Src\Unit2.pas</Transaction>
+    <Transaction>2024/08/31 13:24:23.000.905,C:\projetos\delphi\CotarFretes\Src\View\View.ConsultaCnpj.pas=C:\projetos\delphi\CotarFretes\Src\Unit2.pas</Transaction>
+    <Transaction>2024/08/31 13:24:23.000.905,C:\projetos\delphi\CotarFretes\Src\View\View.ConsultaCnpj.dfm=C:\projetos\delphi\CotarFretes\Src\Unit2.dfm</Transaction>
+    <Transaction>2024/08/31 15:30:31.000.888,=C:\projetos\delphi\CotarFretes\Src\Unit2.pas</Transaction>
+    <Transaction>2024/08/31 15:30:51.000.420,C:\projetos\delphi\CotarFretes\Src\View\View.ConsultasMelhorEnvio.pas=C:\projetos\delphi\CotarFretes\Src\Unit2.pas</Transaction>
+    <Transaction>2024/08/31 15:30:51.000.420,C:\projetos\delphi\CotarFretes\Src\View\View.ConsultasMelhorEnvio.dfm=C:\projetos\delphi\CotarFretes\Src\Unit2.dfm</Transaction>
+    <Transaction>2024/09/01 11:09:20.881,=C:\projetos\delphi\CotarFretes\Src\Unit2.pas</Transaction>
+    <Transaction>2024/09/01 11:09:43.382,C:\projetos\delphi\CotarFretes\Src\View\View.ConsultaCredencialAzul.pas=C:\projetos\delphi\CotarFretes\Src\Unit2.pas</Transaction>
+    <Transaction>2024/09/01 11:09:43.382,C:\projetos\delphi\CotarFretes\Src\View\View.ConsultaCredencialAzul.dfm=C:\projetos\delphi\CotarFretes\Src\Unit2.dfm</Transaction>
+    <Transaction>2024/09/01 15:30:53.007,=C:\projetos\delphi\CotarFretes\Src\Unit1.pas</Transaction>
+    <Transaction>2024/09/01 15:43:38.151,C:\projetos\delphi\CotarFretes\Src\View\View.ConsultaServicosKangu.pas=C:\projetos\delphi\CotarFretes\Src\Unit1.pas</Transaction>
+    <Transaction>2024/09/01 15:43:38.151,C:\projetos\delphi\CotarFretes\Src\View\View.ConsultaServicosKangu.dfm=C:\projetos\delphi\CotarFretes\Src\Unit1.dfm</Transaction>
+    <Transaction>2024/09/01 16:57:30.392,=C:\projetos\delphi\CotarFretes\Src\Unit1.pas</Transaction>
+    <Transaction>2024/09/01 17:10:42.542,C:\projetos\delphi\CotarFretes\Src\View\View.CalculoPortalTransportes.dfm=C:\projetos\delphi\CotarFretes\Src\Unit1.dfm</Transaction>
+    <Transaction>2024/09/01 17:10:42.542,C:\projetos\delphi\CotarFretes\Src\View\View.CalculoPortalTransportes.pas=C:\projetos\delphi\CotarFretes\Src\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
