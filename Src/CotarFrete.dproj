@@ -152,6 +152,14 @@
             <Form>CalculoPortalTransportes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="View\View.ConsultasServicosFlixLog.pas">
+            <Form>ConsultasServicosFlixLog</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\View.TesteSSW.pas">
+            <Form>TesteSSW</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

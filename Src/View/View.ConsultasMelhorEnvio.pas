@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, REST.Types, REST.Client,
-  Data.Bind.Components, Data.Bind.ObjectScope, System.JSON, REST.Response.Adapter;  // Adicionei System.JSON aqui
+  Data.Bind.Components, Data.Bind.ObjectScope, System.JSON, REST.Response.Adapter,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls;  // Adicionei System.JSON aqui
 
 type
   TConsultasMelhorEnvio = class(TForm)
@@ -27,6 +28,7 @@ type
     RESTResponse2: TRESTResponse;
     EditCidade: TEdit;
     Label5: TLabel;
+    Image1: TImage;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure BtnConsultarCompaniesClick(Sender: TObject);
     procedure BtnConsultarAgencyClick(Sender: TObject);

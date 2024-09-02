@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, REST.Types,
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog,
+  View.TesteSSW;
 
 type
   TFormPrincipal = class(TForm)
@@ -30,6 +31,8 @@ type
     otalizadordeCTEs1: TMenuItem;
     ConsultarServiosKangu1: TMenuItem;
     Label1: TLabel;
+    ConsultasFlixlogServios1: TMenuItem;
+    esteCotaoAPIdaSSW1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -37,6 +40,8 @@ type
     procedure ValidarCredencialAzul1Click(Sender: TObject);
     procedure ConsultarServiosKangu1Click(Sender: TObject);
     procedure CotaoviaPortaldeTransportes1Click(Sender: TObject);
+    procedure ConsultasFlixlogServios1Click(Sender: TObject);
+    procedure esteCotaoAPIdaSSW1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,6 +55,8 @@ var
   FormConsultaCredencialAzul: TConsultaCredencialAzul;
   FormConsultaServicosKangu: TConsultaServicosKangu;
   FormCalculoPortalTransportes: TCalculoPortalTransportes;
+  FormConsultaServicosFlixLog: TConsultasServicosFlixLog;
+  FormTesteSSW: TTesteSSW;
 
 implementation
 
@@ -79,6 +86,16 @@ begin
   end;
 end;
 
+procedure TFormPrincipal.ConsultasFlixlogServios1Click(Sender: TObject);
+begin
+  FormConsultaServicosFlixLog := TConsultasServicosFlixLog.Create(Self);
+  try
+    FormConsultaServicosFlixLog.ShowModal;
+  finally
+    FormConsultaServicosFlixLog.Free; // Libera a memória usada
+  end;
+end;
+
 procedure TFormPrincipal.CotaoviaPortaldeTransportes1Click(Sender: TObject);
 begin
   FormCalculoPortalTransportes := TCalculoPortalTransportes.Create(Self);
@@ -86,6 +103,16 @@ begin
     FormCalculoPortalTransportes.ShowModal;
   finally
     FormCalculoPortalTransportes.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.esteCotaoAPIdaSSW1Click(Sender: TObject);
+begin
+  FormTesteSSW := TTesteSSW.Create(Self);
+  try
+    FormTesteSSW.ShowModal;
+  finally
+    FormTesteSSW.Free; // Libera a memória usada
   end;
 end;
 

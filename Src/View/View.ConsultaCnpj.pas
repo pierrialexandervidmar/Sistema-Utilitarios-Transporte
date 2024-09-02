@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, REST.Types, REST.Client,
-  Data.Bind.Components, Data.Bind.ObjectScope, Vcl.StdCtrls, Vcl.Menus;
+  Data.Bind.Components, Data.Bind.ObjectScope, Vcl.StdCtrls, Vcl.Menus,
+  Vcl.Imaging.jpeg, Vcl.ExtCtrls;
 
 type
   TConsultaCnpj = class(TForm)
@@ -17,6 +18,7 @@ type
     RESTRequest1: TRESTRequest;
     RESTResponse1: TRESTResponse;
     Button1: TButton;
+    Image1: TImage;
     procedure btnPesquisarClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Sair1Click(Sender: TObject);

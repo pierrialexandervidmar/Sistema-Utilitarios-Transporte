@@ -15993,17 +15993,25 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Consultas Melhor Envio'
         OnClick = MelhorEnvio1Click
       end
-      object ValidarCredencialAzul1: TMenuItem
-        Caption = 'Validar Credencial da Azul'
-        OnClick = ValidarCredencialAzul1Click
-      end
       object ConsultarServiosKangu1: TMenuItem
         Caption = 'Consultar Servi'#231'os Kangu'
         OnClick = ConsultarServiosKangu1Click
       end
+      object ConsultasFlixlogServios1: TMenuItem
+        Caption = 'Consultas Servi'#231'os Flixlog'
+        OnClick = ConsultasFlixlogServios1Click
+      end
+      object ValidarCredencialAzul1: TMenuItem
+        Caption = 'Validar Credencial da Azul'
+        OnClick = ValidarCredencialAzul1Click
+      end
       object CotaoviaPortaldeTransportes1: TMenuItem
         Caption = 'Cota'#231#227'o via Portal de Transportes'
         OnClick = CotaoviaPortaldeTransportes1Click
+      end
+      object esteCotaoAPIdaSSW1: TMenuItem
+        Caption = 'Teste Cota'#231#227'o API da SSW'
+        OnClick = esteCotaoAPIdaSSW1Click
       end
     end
     object Ferramentas1: TMenuItem
