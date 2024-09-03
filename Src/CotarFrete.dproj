@@ -160,6 +160,10 @@
             <Form>TesteSSW</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="View\View.GerarTokenJWT.pas">
+            <Form>GerarTokenJWT</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -2,7 +2,7 @@ object FormPrincipal: TFormPrincipal
   Left = 0
   Top = 0
   Caption = 'Sistema de Utilit'#225'rios Transporte'
-  ClientHeight = 682
+  ClientHeight = 644
   ClientWidth = 1292
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,13 +13,33 @@ object FormPrincipal: TFormPrincipal
   Menu = MainMenu1
   Position = poDesktopCenter
   WindowState = wsMaximized
+  DesignSize = (
+    1292
+    644)
   TextHeight = 15
+  object Label1: TLabel
+    Left = 0
+    Top = 0
+    Width = 1292
+    Height = 25
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Sistema de Utilit'#225'rios e Ferramentas - Produto Transportes'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGray
+    Font.Height = -19
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object Image1: TImage
     Left = 0
-    Top = 14
+    Top = 25
     Width = 1292
-    Height = 649
-    Align = alBottom
+    Height = 600
+    Align = alClient
+    Anchors = [akLeft, akRight, akBottom]
+    AutoSize = True
     Center = True
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000003040000
@@ -14906,14 +14926,15 @@ object FormPrincipal: TFormPrincipal
       0D1BA7248EA52FB03A011B36E647584060C3860D1B366CD838A561EA0BAC4EC0
       868DF9151610D8B061C3860D1B364E4B507D415C08DBAD4EC0868DF915FF1395
       7EBDE4C93B2F4F0000000049454E44AE426082}
-    ExplicitTop = 449
+    ExplicitTop = 56
+    ExplicitHeight = 569
   end
   object Image2: TImage
     Left = 0
     Top = 25
-    Width = 1292
-    Height = 225
-    Align = alTop
+    Width = 1284
+    Height = 169
+    Anchors = [akLeft, akTop, akRight]
     Center = True
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000003560000
@@ -15936,32 +15957,16 @@ object FormPrincipal: TFormPrincipal
       00001282B00200000000004808C20A00000000002021082B0000000000808420
       AC0000000000001282B00200000000004808C20A00000000002021FF02486C28
       01DAB37C060000000049454E44AE426082}
-    ExplicitTop = -64
-  end
-  object Label1: TLabel
-    Left = 0
-    Top = 0
-    Width = 1292
-    Height = 25
-    Align = alTop
-    Alignment = taCenter
-    Caption = 'Sistema de Utilit'#225'rios e Ferramentas - Produto Transportes'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clGray
-    Font.Height = -19
-    Font.Name = 'Segoe UI Semibold'
-    Font.Style = [fsBold]
-    ParentFont = False
-    ExplicitWidth = 499
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 663
+    Top = 625
     Width = 1292
     Height = 19
+    Anchors = [akBottom]
     Panels = <
       item
-        Text = 'Desenvolvido por Pierri Alexander Vidmar - Vers'#227'o: 01.00.01'
+        Text = 'Desenvolvido por Pierri Alexander Vidmar - Vers'#227'o: 01.00.02'
         Width = 350
       end
       item
@@ -15973,6 +15978,7 @@ object FormPrincipal: TFormPrincipal
       item
         Width = 50
       end>
+    ExplicitTop = 663
   end
   object MainMenu1: TMainMenu
     Left = 1208
@@ -16012,6 +16018,10 @@ object FormPrincipal: TFormPrincipal
       object esteCotaoAPIdaSSW1: TMenuItem
         Caption = 'Teste Cota'#231#227'o API da SSW'
         OnClick = esteCotaoAPIdaSSW1Click
+      end
+      object GerarLinkJWTPortalBW1: TMenuItem
+        Caption = 'Portal BW - Gerar Link JWT'
+        OnClick = GerarLinkJWTPortalBW1Click
       end
     end
     object Ferramentas1: TMenuItem

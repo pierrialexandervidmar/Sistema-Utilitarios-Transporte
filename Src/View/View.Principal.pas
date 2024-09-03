@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, REST.Types,
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog,
-  View.TesteSSW;
+  View.TesteSSW, View.GerarTokenJWT;
 
 type
   TFormPrincipal = class(TForm)
@@ -22,8 +22,6 @@ type
     ValidadordeCSV1: TMenuItem;
     GeradordeTwig1: TMenuItem;
     ValidarCredencialAzul1: TMenuItem;
-    Image1: TImage;
-    Image2: TImage;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
     CotaoviaPortaldeTransportes1: TMenuItem;
@@ -33,6 +31,9 @@ type
     Label1: TLabel;
     ConsultasFlixlogServios1: TMenuItem;
     esteCotaoAPIdaSSW1: TMenuItem;
+    Image1: TImage;
+    Image2: TImage;
+    GerarLinkJWTPortalBW1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -42,6 +43,7 @@ type
     procedure CotaoviaPortaldeTransportes1Click(Sender: TObject);
     procedure ConsultasFlixlogServios1Click(Sender: TObject);
     procedure esteCotaoAPIdaSSW1Click(Sender: TObject);
+    procedure GerarLinkJWTPortalBW1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,6 +59,7 @@ var
   FormCalculoPortalTransportes: TCalculoPortalTransportes;
   FormConsultaServicosFlixLog: TConsultasServicosFlixLog;
   FormTesteSSW: TTesteSSW;
+  FormGerarTokenJWT: TGerarTokenJWT;
 
 implementation
 
@@ -113,6 +116,16 @@ begin
     FormTesteSSW.ShowModal;
   finally
     FormTesteSSW.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.GerarLinkJWTPortalBW1Click(Sender: TObject);
+begin
+  FormGerarTokenJWT := TGerarTokenJWT.Create(Self);
+  try
+    FormGerarTokenJWT.ShowModal;
+  finally
+    FormGerarTokenJWT.Free; // Libera a memória usada
   end;
 end;
 

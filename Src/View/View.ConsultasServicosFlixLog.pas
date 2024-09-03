@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
   Vcl.ExtCtrls, REST.Types, REST.Client, Data.Bind.Components,
-  Data.Bind.ObjectScope, System.JSON;
+  Data.Bind.ObjectScope, System.JSON, TypInfo;
 
 type
   TConsultasServicosFlixLog = class(TForm)
@@ -38,14 +38,19 @@ implementation
 
 {$R *.dfm}
 
-
-
 procedure TConsultasServicosFlixLog.BtnConsultarClick(Sender: TObject);
 var
-  TokenFormatado, CEPOrigemFormatado: string;
+  TokenFormatado, CEPOrigemFormatado, HeaderInfo: string;
+  I: Integer;
+  JSONBody: TJSONObject;
+  JSONParcels: TJSONArray;
+  JSONParcel: TJSONObject;
+  BodyStream: TStringStream;
+  ResponseText: string;
+  JSONResponse: TJSONValue;
 begin
   // Lê o Token e o Cep de origem a partir dos Edit components e formata
-  TokenFormatado := StringReplace(EditToken.Text, ' ', '', [rfReplaceAll]);
+  TokenFormatado := Trim(StringReplace(EditToken.Text, ' ', '', [rfReplaceAll]));
 
   CEPOrigemFormatado := StringReplace(EditCepOrigem.Text, '.', '', [rfReplaceAll]);
   CEPOrigemFormatado := StringReplace(CEPOrigemFormatado, '-', '', [rfReplaceAll]);
@@ -62,49 +67,113 @@ begin
   RESTRequest1.Params.Clear;
 
   // Adiciona o cabeçalho de autorização com o token fornecido
-  RESTRequest1.Params.AddHeader('Authorization', 'Token ' + TokenFormatado);
+  RESTRequest1.Params.AddHeader('Authorization', TokenFormatado);
   RESTRequest1.Params.AddHeader('Content-Type', 'application/json');
 
-  // Configura o corpo da requisição JSON
-  // RESTRequest1.Body.Clear;
-  RESTRequest1.Body.Add(
-    Format(
-      '{' +
-      '"from": "%s",' +
-      '"to": "01501010",' +
-      '"parcels": [' +
-      '{' +
-      '"width": 0.10,' +
-      '"length": 0.60,' +
-      '"height": 0.10,' +
-      '"weight": 0.10,' +
-      '"quantity": 1,' +
-      '"cargo_value": 0.2,' +
-      '"reference": "TRAMFE010"' +
-      '}' +
-      '],' +
-      '"show_all": true' +
-      '}',
-      [CEPOrigemFormatado]
-    ), TRESTContentType.ctAPPLICATION_JSON
-  );
-
-  // Associa a resposta ao componente RESTResponse
-  RESTRequest1.Response := RESTResponse1;
-
+  // Cria o JSON para o corpo da requisição
+  JSONBody := TJSONObject.Create;
   try
-    // Executa a requisição
-    RESTRequest1.Execute;
+    JSONBody.AddPair('from', CEPOrigemFormatado);
+    JSONBody.AddPair('to', '01501010');
 
-    // Exibe a resposta no componente Memo
-    DadosRespostaFlixlog.Lines.Text := RESTResponse1.Content;
-  except
-    on E: ERESTException do
-    begin
-      ShowMessage('Erro na requisição: ' + E.Message);
+    JSONParcels := TJSONArray.Create;
+    JSONParcel := TJSONObject.Create;
+    try
+      JSONParcel.AddPair('width', TJSONNumber.Create(0.10));
+      JSONParcel.AddPair('length', TJSONNumber.Create(0.60));
+      JSONParcel.AddPair('height', TJSONNumber.Create(0.10));
+      JSONParcel.AddPair('weight', TJSONNumber.Create(0.10));
+      JSONParcel.AddPair('quantity', TJSONNumber.Create(1));
+      JSONParcel.AddPair('cargo_value', TJSONNumber.Create(0.2));
+      JSONParcel.AddPair('reference', 'TRAMFE010');
+
+      JSONParcels.AddElement(JSONParcel);
+      JSONBody.AddPair('parcels', JSONParcels);
+    except
+      JSONParcel.Free;
+      raise;
     end;
+
+    JSONBody.AddPair('show_all', TJSONBool.Create(True));
+
+    // Converte o JSON para string e configura o corpo da requisição
+    BodyStream := TStringStream.Create(JSONBody.ToString, TEncoding.UTF8);
+    try
+      //RESTRequest1.Body.Clear;
+      RESTRequest1.Body.Add(BodyStream.DataString, TRESTContentType.ctAPPLICATION_JSON);
+
+      // Associa a resposta ao componente RESTResponse
+      RESTRequest1.Response := RESTResponse1;
+
+      try
+        // Executa a requisição
+        RESTRequest1.Execute;
+
+        // Exibe a resposta no componente Memo
+        ResponseText := RESTResponse1.Content;
+//        DadosRespostaFlixlog.Lines.Text := ResponseText;
+
+        // Adiciona a estrutura da resposta JSON ao Memo
+        JSONResponse := TJSONObject.ParseJSONValue(ResponseText);
+        try
+          if JSONResponse is TJSONObject then
+          begin
+            DadosRespostaFlixlog.Lines.Add((JSONResponse as TJSONObject).Format(2));
+          end
+          else if JSONResponse is TJSONArray then
+          begin
+            DadosRespostaFlixlog.Lines.Add((JSONResponse as TJSONArray).Format(2));
+          end
+          else
+          begin
+            DadosRespostaFlixlog.Lines.Add('Resposta não é um JSON válido.');
+          end;
+        finally
+          JSONResponse.Free;
+        end;
+
+        DadosRespostaFlixlog.Lines.Add('');
+        DadosRespostaFlixlog.Lines.Add('');
+        DadosRespostaFlixlog.Lines.Add('');
+        DadosRespostaFlixlog.Lines.Add('');
+        DadosRespostaFlixlog.Lines.Add('ABAIXO SEGUE PAYLOAD DA REQUISIÇÃO ENVIADA, PARA CONFERÊNCIA: ');
+
+        // Adiciona o método e a URL da requisição ao Memo
+        DadosRespostaFlixlog.Lines.Add('Método: ' + GetEnumName(TypeInfo(TRESTRequestMethod), Integer(RESTRequest1.Method)));
+        DadosRespostaFlixlog.Lines.Add('URL: ' + RESTClient1.BaseURL + RESTRequest1.Resource);
+
+        // Adiciona os cabeçalhos da requisição ao Memo
+        DadosRespostaFlixlog.Lines.Add('=== Headers ===');
+        for I := 0 to RESTRequest1.Params.Count - 1 do
+        begin
+          if RESTRequest1.Params[I].Kind = pkHTTPHEADER then
+          begin
+            HeaderInfo := RESTRequest1.Params[I].Name + ': ' + RESTRequest1.Params[I].Value;
+            DadosRespostaFlixlog.Lines.Add(HeaderInfo);
+          end;
+        end;
+
+        // Adiciona o corpo da requisição ao Memo
+        DadosRespostaFlixlog.Lines.Add('=== Corpo da Requisição ===');
+        DadosRespostaFlixlog.Lines.Add(BodyStream.DataString);
+
+      except
+        on E: ERESTException do
+        begin
+          ShowMessage('Erro na requisição: ' + E.Message);
+        end;
+      end;
+
+    finally
+      BodyStream.Free;
+    end;
+
+  finally
+    JSONBody.Free;
   end;
 end;
+
+
 
 procedure TConsultasServicosFlixLog.BtnLimparClick(Sender: TObject);
 begin
@@ -117,8 +186,9 @@ end;
 procedure TConsultasServicosFlixLog.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  if key = VK_ESCAPE then
+  if Key = VK_ESCAPE then
     Close;
 end;
 
 end.
+

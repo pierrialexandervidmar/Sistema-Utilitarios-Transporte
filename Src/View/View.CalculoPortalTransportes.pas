@@ -58,7 +58,7 @@ var
   JSONBody: TJSONObject;
   JSONProduto, JSONVolumeDetalhes: TJSONObject;
   JSONArrayProdutos, JSONArrayServicos, JSONArrayVolumesDetalhes: TJSONArray;
-  JSONResponse: TJSONObject;
+  JSONResponse, JSONRequest: TJSONObject;
   FormattedJSON: string;
   CEPOrigemFormatado, CEPDestinoFormatado: string;
 begin
@@ -148,6 +148,7 @@ begin
         try
           // Parse da resposta JSON
           JSONResponse := TJSONObject.ParseJSONValue(RESTResponse1.Content) as TJSONObject;
+          JSONRequest := TJSONObject.ParseJSONValue(JSONBody.ToString) as TJSONObject;
           if JSONResponse <> nil then
           begin
             try
@@ -156,6 +157,14 @@ begin
 
               // Exibir JSON formatado no Memo
               DadosCalculoFrete.Lines.Text := FormattedJSON;
+
+              // Damos um espamento e adicionamos o Json do Payload da Requisição abaixo, para conferência
+              DadosCalculoFrete.Lines.Add('');
+              DadosCalculoFrete.Lines.Add('');
+              DadosCalculoFrete.Lines.Add('');
+              DadosCalculoFrete.Lines.Add('');
+              DadosCalculoFrete.Lines.Add('ABAIXO SEGUE PAYLOAD DA REQUISIÇÃO ENVIADA, PARA CONFERÊNCIA: ');
+              DadosCalculoFrete.Lines.Add(JSONRequest.Format(2));
             finally
               JSONResponse.Free;
             end;
