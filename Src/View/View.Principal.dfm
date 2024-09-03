@@ -31,6 +31,7 @@ object FormPrincipal: TFormPrincipal
     Font.Name = 'Segoe UI Semibold'
     Font.Style = [fsBold]
     ParentFont = False
+    ExplicitWidth = 499
   end
   object Image1: TImage
     Left = 0
@@ -15978,7 +15979,6 @@ object FormPrincipal: TFormPrincipal
       item
         Width = 50
       end>
-    ExplicitTop = 663
   end
   object MainMenu1: TMainMenu
     Left = 1208
@@ -16037,6 +16037,30 @@ object FormPrincipal: TFormPrincipal
       end
       object otalizadordeCTEs1: TMenuItem
         Caption = 'Totalizador de CTEs *'
+      end
+    end
+    object Ocorrncias1: TMenuItem
+      Caption = 'Ocorr'#234'ncias'
+      object Openlog1: TMenuItem
+        Caption = 'Azul *'
+      end
+      object Braspress1: TMenuItem
+        Caption = 'Braspress *'
+      end
+      object Carriers1: TMenuItem
+        Caption = 'Carriers *'
+      end
+      object Daytona1: TMenuItem
+        Caption = 'Daytona *'
+      end
+      object Jadlog1: TMenuItem
+        Caption = 'Jadlog *'
+      end
+      object Openlog2: TMenuItem
+        Caption = 'Openlog *'
+      end
+      object SSW1: TMenuItem
+        Caption = 'SSW *'
       end
     end
     object Sair1: TMenuItem

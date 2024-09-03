@@ -34,6 +34,14 @@ type
     Image1: TImage;
     Image2: TImage;
     GerarLinkJWTPortalBW1: TMenuItem;
+    Ocorrncias1: TMenuItem;
+    Openlog1: TMenuItem;
+    Braspress1: TMenuItem;
+    Carriers1: TMenuItem;
+    Daytona1: TMenuItem;
+    Jadlog1: TMenuItem;
+    Openlog2: TMenuItem;
+    SSW1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
