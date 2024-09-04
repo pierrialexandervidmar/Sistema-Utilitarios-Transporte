@@ -164,6 +164,22 @@
             <Form>GerarTokenJWT</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="View\View.DeParaXmlCte.pas">
+            <Form>DeParaXmlCte</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\View.ConsultaOcorrenciaAzul.pas">
+            <Form>ConsultaOcorrenciaAzul</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\View.ConsultaOcorrenciaBraspress.pas">
+            <Form>ConsultaOcorrenciaBraspress</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\View.ConsultaOcorrenciaDaytona.pas">
+            <Form>ConsultaOcorrenciaDaytona</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

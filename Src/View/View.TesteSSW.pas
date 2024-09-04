@@ -118,6 +118,7 @@ begin
   // Remove pontos, traços e espaços do texto, mantendo apenas números
   Result := StringReplace(AText, '.', '', [rfReplaceAll]);
   Result := StringReplace(Result, '-', '', [rfReplaceAll]);
+  Result := StringReplace(Result, '/', '', [rfReplaceAll]);
   Result := StringReplace(Result, ' ', '', [rfReplaceAll]);
 end;
 

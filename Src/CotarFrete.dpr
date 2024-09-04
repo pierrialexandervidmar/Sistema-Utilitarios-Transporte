@@ -10,7 +10,11 @@ uses
   View.CalculoPortalTransportes in 'View\View.CalculoPortalTransportes.pas' {CalculoPortalTransportes},
   View.ConsultasServicosFlixLog in 'View\View.ConsultasServicosFlixLog.pas' {ConsultasServicosFlixLog},
   View.TesteSSW in 'View\View.TesteSSW.pas' {TesteSSW},
-  View.GerarTokenJWT in 'View\View.GerarTokenJWT.pas' {GerarTokenJWT};
+  View.GerarTokenJWT in 'View\View.GerarTokenJWT.pas' {GerarTokenJWT},
+  View.DeParaXmlCte in 'View\View.DeParaXmlCte.pas' {DeParaXmlCte},
+  View.ConsultaOcorrenciaAzul in 'View\View.ConsultaOcorrenciaAzul.pas' {ConsultaOcorrenciaAzul},
+  View.ConsultaOcorrenciaBraspress in 'View\View.ConsultaOcorrenciaBraspress.pas' {ConsultaOcorrenciaBraspress},
+  View.ConsultaOcorrenciaDaytona in 'View\View.ConsultaOcorrenciaDaytona.pas' {ConsultaOcorrenciaDaytona};
 
 {$R *.res}
 

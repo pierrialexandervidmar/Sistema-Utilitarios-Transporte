@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, REST.Types,
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog,
-  View.TesteSSW, View.GerarTokenJWT;
+  View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona;
 
 type
   TFormPrincipal = class(TForm)
@@ -42,6 +42,7 @@ type
     Jadlog1: TMenuItem;
     Openlog2: TMenuItem;
     SSW1: TMenuItem;
+    otalXMLxTotalCotao1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -52,6 +53,10 @@ type
     procedure ConsultasFlixlogServios1Click(Sender: TObject);
     procedure esteCotaoAPIdaSSW1Click(Sender: TObject);
     procedure GerarLinkJWTPortalBW1Click(Sender: TObject);
+    procedure otalXMLxTotalCotao1Click(Sender: TObject);
+    procedure Openlog1Click(Sender: TObject);
+    procedure Braspress1Click(Sender: TObject);
+    procedure Daytona1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -68,7 +73,10 @@ var
   FormConsultaServicosFlixLog: TConsultasServicosFlixLog;
   FormTesteSSW: TTesteSSW;
   FormGerarTokenJWT: TGerarTokenJWT;
-
+  FormDeParaXmlCte: TDeParaXmlCte;
+  FormConsultaOcorrenciaAzul: TConsultaOcorrenciaAzul;
+  FormConsultaOcorrenciaBraspress: TConsultaOcorrenciaBraspress;
+  FormConsultaOcorrenciaDaytona: TConsultaOcorrenciaDaytona;
 implementation
 
 {$R *.dfm}
@@ -76,6 +84,16 @@ implementation
 
 
 
+
+procedure TFormPrincipal.Braspress1Click(Sender: TObject);
+begin
+  FormConsultaOcorrenciaBraspress := TConsultaOcorrenciaBraspress.Create(Self);
+  try
+    FormConsultaOcorrenciaBraspress.ShowModal;
+  finally
+    FormConsultaOcorrenciaBraspress.Free; // Libera a memória
+  end;
+end;
 
 procedure TFormPrincipal.ConsultaCNPJ1Click(Sender: TObject);
 begin
@@ -117,6 +135,16 @@ begin
   end;
 end;
 
+procedure TFormPrincipal.Daytona1Click(Sender: TObject);
+begin
+  FormConsultaOcorrenciaDaytona := TConsultaOcorrenciaDaytona.Create(Self);
+  try
+    FormConsultaOcorrenciaDaytona.ShowModal;
+  finally
+    FormConsultaOcorrenciaDaytona.Free; // Libera a memória usada
+  end;
+end;
+
 procedure TFormPrincipal.esteCotaoAPIdaSSW1Click(Sender: TObject);
 begin
   FormTesteSSW := TTesteSSW.Create(Self);
@@ -144,6 +172,26 @@ begin
     FormConsultasMelhorEnvio.ShowModal;
   finally
     FormConsultasMelhorEnvio.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.Openlog1Click(Sender: TObject);
+begin
+  FormConsultaOcorrenciaAzul := TConsultaOcorrenciaAzul.Create(Self);
+  try
+    FormConsultaOcorrenciaAzul.ShowModal;
+  finally
+    FormConsultaOcorrenciaAzul.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.otalXMLxTotalCotao1Click(Sender: TObject);
+begin
+  FormDeParaXmlCte := TDeParaXmlCte.Create(Self);
+  try
+    FormDeParaXmlCte.ShowModal;
+  finally
+    FormDeParaXmlCte.Free; // Libera a memória usada
   end;
 end;
 

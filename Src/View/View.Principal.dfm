@@ -16026,6 +16026,10 @@ object FormPrincipal: TFormPrincipal
     end
     object Ferramentas1: TMenuItem
       Caption = 'Ferramentas'
+      object otalXMLxTotalCotao1: TMenuItem
+        Caption = 'Total XML x Total Cota'#231#227'o'
+        OnClick = otalXMLxTotalCotao1Click
+      end
       object ValidadordeCSV1: TMenuItem
         Caption = 'Validador de CSV *'
       end
@@ -16036,22 +16040,25 @@ object FormPrincipal: TFormPrincipal
         Caption = 'An'#225'lise de Cota'#231#245'es *'
       end
       object otalizadordeCTEs1: TMenuItem
-        Caption = 'Totalizador de CTEs *'
+        Caption = 'Totalizador de Multiplos CTEs *'
       end
     end
     object Ocorrncias1: TMenuItem
       Caption = 'Ocorr'#234'ncias'
       object Openlog1: TMenuItem
-        Caption = 'Azul *'
+        Caption = 'Azul '
+        OnClick = Openlog1Click
       end
       object Braspress1: TMenuItem
-        Caption = 'Braspress *'
+        Caption = 'Braspress'
+        OnClick = Braspress1Click
+      end
+      object Daytona1: TMenuItem
+        Caption = 'Daytona'
+        OnClick = Daytona1Click
       end
       object Carriers1: TMenuItem
         Caption = 'Carriers *'
-      end
-      object Daytona1: TMenuItem
-        Caption = 'Daytona *'
       end
       object Jadlog1: TMenuItem
         Caption = 'Jadlog *'

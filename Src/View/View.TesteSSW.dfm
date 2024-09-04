@@ -14,6 +14,7 @@ object TesteSSW: TTesteSSW
   Font.Style = []
   KeyPreview = True
   Position = poMainFormCenter
+  ShowHint = True
   OnKeyDown = FormKeyDown
   TextHeight = 15
   object Label2: TLabel
@@ -149,9 +150,9 @@ object TesteSSW: TTesteSSW
   object Label11: TLabel
     Left = 23
     Top = 408
-    Width = 99
+    Width = 156
     Height = 17
-    Caption = 'C'#243'd. Mercadoria'
+    Caption = 'Tipo de Mercadoria (Cod.)'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -164,7 +165,7 @@ object TesteSSW: TTesteSSW
     Top = 472
     Width = 174
     Height = 17
-    Caption = 'CEP ou CNPJ do Destinat'#225'rio'
+    Caption = 'CPF ou CNPJ do Destinat'#225'rio'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -259,7 +260,7 @@ object TesteSSW: TTesteSSW
   object EditCodigoMercadoria: TEdit
     Left = 24
     Top = 431
-    Width = 121
+    Width = 160
     Height = 23
     TabOrder = 10
   end
