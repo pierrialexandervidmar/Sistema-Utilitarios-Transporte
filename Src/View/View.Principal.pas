@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, REST.Types,
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog,
-  View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona;
+  View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona, View.AutenticarCorreios;
 
 type
   TFormPrincipal = class(TForm)
@@ -43,6 +43,7 @@ type
     Openlog2: TMenuItem;
     SSW1: TMenuItem;
     otalXMLxTotalCotao1: TMenuItem;
+    estedeAutenticaoCorreios1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -57,6 +58,7 @@ type
     procedure Openlog1Click(Sender: TObject);
     procedure Braspress1Click(Sender: TObject);
     procedure Daytona1Click(Sender: TObject);
+    procedure estedeAutenticaoCorreios1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -77,6 +79,7 @@ var
   FormConsultaOcorrenciaAzul: TConsultaOcorrenciaAzul;
   FormConsultaOcorrenciaBraspress: TConsultaOcorrenciaBraspress;
   FormConsultaOcorrenciaDaytona: TConsultaOcorrenciaDaytona;
+  FormAutenticarCorreios: TAutenticarCorreios;
 implementation
 
 {$R *.dfm}
@@ -152,6 +155,16 @@ begin
     FormTesteSSW.ShowModal;
   finally
     FormTesteSSW.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.estedeAutenticaoCorreios1Click(Sender: TObject);
+begin
+  FormAutenticarCorreios := TAutenticarCorreios.Create(Self);
+  try
+    FormAutenticarCorreios.ShowModal;
+  finally
+    FormAutenticarCorreios.Free; // Libera a memória usada
   end;
 end;
 

@@ -16007,21 +16007,25 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Consultas Servi'#231'os Flixlog'
         OnClick = ConsultasFlixlogServios1Click
       end
-      object ValidarCredencialAzul1: TMenuItem
-        Caption = 'Validar Credencial da Azul'
-        OnClick = ValidarCredencialAzul1Click
-      end
       object CotaoviaPortaldeTransportes1: TMenuItem
         Caption = 'Cota'#231#227'o via Portal de Transportes'
         OnClick = CotaoviaPortaldeTransportes1Click
+      end
+      object GerarLinkJWTPortalBW1: TMenuItem
+        Caption = 'Portal BW - Gerar Link JWT'
+        OnClick = GerarLinkJWTPortalBW1Click
       end
       object esteCotaoAPIdaSSW1: TMenuItem
         Caption = 'Teste Cota'#231#227'o API da SSW'
         OnClick = esteCotaoAPIdaSSW1Click
       end
-      object GerarLinkJWTPortalBW1: TMenuItem
-        Caption = 'Portal BW - Gerar Link JWT'
-        OnClick = GerarLinkJWTPortalBW1Click
+      object estedeAutenticaoCorreios1: TMenuItem
+        Caption = 'Teste de Autentica'#231#227'o Correios'
+        OnClick = estedeAutenticaoCorreios1Click
+      end
+      object ValidarCredencialAzul1: TMenuItem
+        Caption = 'Validar Credencial da Azul'
+        OnClick = ValidarCredencialAzul1Click
       end
     end
     object Ferramentas1: TMenuItem

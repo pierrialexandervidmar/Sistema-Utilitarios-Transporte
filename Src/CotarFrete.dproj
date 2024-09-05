@@ -180,6 +180,10 @@
             <Form>ConsultaOcorrenciaDaytona</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="View\View.AutenticarCorreios.pas">
+            <Form>AutenticarCorreios</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
