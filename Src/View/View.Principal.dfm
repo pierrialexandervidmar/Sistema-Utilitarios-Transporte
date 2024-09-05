@@ -16057,6 +16057,10 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Braspress'
         OnClick = Braspress1Click
       end
+      object Buslog1: TMenuItem
+        Caption = 'Buslog'
+        OnClick = Buslog1Click
+      end
       object Daytona1: TMenuItem
         Caption = 'Daytona'
         OnClick = Daytona1Click

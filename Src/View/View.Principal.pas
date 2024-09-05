@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, REST.Types,
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog, View.ConsultaOcorrenciaBuslog,
   View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona, View.AutenticarCorreios;
 
 type
@@ -44,6 +44,7 @@ type
     SSW1: TMenuItem;
     otalXMLxTotalCotao1: TMenuItem;
     estedeAutenticaoCorreios1: TMenuItem;
+    Buslog1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -59,6 +60,7 @@ type
     procedure Braspress1Click(Sender: TObject);
     procedure Daytona1Click(Sender: TObject);
     procedure estedeAutenticaoCorreios1Click(Sender: TObject);
+    procedure Buslog1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -80,6 +82,7 @@ var
   FormConsultaOcorrenciaBraspress: TConsultaOcorrenciaBraspress;
   FormConsultaOcorrenciaDaytona: TConsultaOcorrenciaDaytona;
   FormAutenticarCorreios: TAutenticarCorreios;
+  FormConsultaOcorrenciaBuslog: TConsultaOcorrenciaBuslog;
 implementation
 
 {$R *.dfm}
@@ -95,6 +98,16 @@ begin
     FormConsultaOcorrenciaBraspress.ShowModal;
   finally
     FormConsultaOcorrenciaBraspress.Free; // Libera a memória
+  end;
+end;
+
+procedure TFormPrincipal.Buslog1Click(Sender: TObject);
+begin
+  FormConsultaOcorrenciaBuslog := TConsultaOcorrenciaBuslog.Create(Self);
+  try
+    FormConsultaOcorrenciaBuslog.ShowModal;
+  finally
+    FormConsultaOcorrenciaBuslog.Free; // Libera a memória usada
   end;
 end;
 

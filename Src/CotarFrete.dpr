@@ -15,7 +15,8 @@ uses
   View.ConsultaOcorrenciaAzul in 'View\View.ConsultaOcorrenciaAzul.pas' {ConsultaOcorrenciaAzul},
   View.ConsultaOcorrenciaBraspress in 'View\View.ConsultaOcorrenciaBraspress.pas' {ConsultaOcorrenciaBraspress},
   View.ConsultaOcorrenciaDaytona in 'View\View.ConsultaOcorrenciaDaytona.pas' {ConsultaOcorrenciaDaytona},
-  View.AutenticarCorreios in 'View\View.AutenticarCorreios.pas' {AutenticarCorreios};
+  View.AutenticarCorreios in 'View\View.AutenticarCorreios.pas' {AutenticarCorreios},
+  View.ConsultaOcorrenciaBuslog in 'View\View.ConsultaOcorrenciaBuslog.pas' {ConsultaOcorrenciaBuslog};
 
 {$R *.res}
 
@@ -23,6 +24,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
-  Application.CreateForm(TAutenticarCorreios, AutenticarCorreios);
   Application.Run;
 end.
