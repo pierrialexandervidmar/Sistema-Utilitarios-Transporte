@@ -18,7 +18,9 @@ uses
   View.AutenticarCorreios in 'View\View.AutenticarCorreios.pas' {AutenticarCorreios},
   View.ConsultaOcorrenciaBuslog in 'View\View.ConsultaOcorrenciaBuslog.pas' {ConsultaOcorrenciaBuslog},
   View.ConsultaOcorrenciaJadlog in 'View\View.ConsultaOcorrenciaJadlog.pas' {FormConsultaOcorrenciaJadlog},
-  View.CotacaoJadlog in 'View\View.CotacaoJadlog.pas' {CotacaoJadlog};
+  View.CotacaoJadlog in 'View\View.CotacaoJadlog.pas' {CotacaoJadlog},
+  View.ConsultaOcorrenciaOpenlog in 'View\View.ConsultaOcorrenciaOpenlog.pas' {ConsultaOcorrenciaOpenlog},
+  View.GeradorTwig in 'View\View.GeradorTwig.pas' {GeradorTwig};
 
 {$R *.res}
 
@@ -26,5 +28,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TGeradorTwig, GeradorTwig);
   Application.Run;
 end.

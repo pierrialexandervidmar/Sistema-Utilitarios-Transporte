@@ -192,7 +192,7 @@ begin
             if not TagContent and not InTagName then
             begin
               // Add line break after tag content if it was inside a tag
-              Result := Result + sLineBreak;
+              Result := Result;
             end;
             TagContent := True;
           end;
@@ -267,7 +267,6 @@ begin
     '<volume xsi:type="xsd:decimal">' + EditVolume.Text + '</volume>' +
     '<mercadoria xsi:type="xsd:integer">' + EditCodigoMercadoria.Text + '</mercadoria>' +
     '<cnpjDestinatario xsi:type="xsd:string">' + EditCNPJCEPDestinatario.Text + '</cnpjDestinatario>' +
-    // Valores mocados para os campos restantes
     '<coletar xsi:type="xsd:string">S</coletar>' +
     '<entDificil xsi:type="xsd:string">N</entDificil>' +
     '<destContribuinte xsi:type="xsd:string">N</destContribuinte>' +

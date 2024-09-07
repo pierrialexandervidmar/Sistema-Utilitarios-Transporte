@@ -8,7 +8,7 @@ uses
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog, View.ConsultaOcorrenciaBuslog,
   View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona, View.AutenticarCorreios,
-  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog;
+  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog, View.ConsultaOcorrenciaOpenlog, View.GeradorTwig;
 
 type
   TFormPrincipal = class(TForm)
@@ -36,12 +36,11 @@ type
     Image2: TImage;
     GerarLinkJWTPortalBW1: TMenuItem;
     Ocorrncias1: TMenuItem;
-    Openlog1: TMenuItem;
+    Azul1: TMenuItem;
     Braspress1: TMenuItem;
     Carriers1: TMenuItem;
     Daytona1: TMenuItem;
     Jadlog1: TMenuItem;
-    Openlog2: TMenuItem;
     SSW1: TMenuItem;
     otalXMLxTotalCotao1: TMenuItem;
     estedeAutenticaoCorreios1: TMenuItem;
@@ -51,6 +50,7 @@ type
     SSW2: TMenuItem;
     Openlog3: TMenuItem;
     NT1: TMenuItem;
+    OpenlogEngloba1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -62,7 +62,6 @@ type
     procedure esteCotaoAPIdaSSW1Click(Sender: TObject);
     procedure GerarLinkJWTPortalBW1Click(Sender: TObject);
     procedure otalXMLxTotalCotao1Click(Sender: TObject);
-    procedure Openlog1Click(Sender: TObject);
     procedure Braspress1Click(Sender: TObject);
     procedure Daytona1Click(Sender: TObject);
     procedure estedeAutenticaoCorreios1Click(Sender: TObject);
@@ -70,6 +69,9 @@ type
     procedure Jadlog1Click(Sender: TObject);
     procedure SSW2Click(Sender: TObject);
     procedure JadLog2Click(Sender: TObject);
+    procedure OpenlogEngloba1Click(Sender: TObject);
+    procedure Azul1Click(Sender: TObject);
+    procedure GeradordeTwig1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -94,6 +96,8 @@ var
   FormConsultaOcorrenciaBuslog: TConsultaOcorrenciaBuslog;
   FormConsultaOcorrenciaJadlog: TFormConsultaOcorrenciaJadlog;
   FormCotacaoJadlog: TCotacaoJadlog;
+  FormConsultaOcorrenciaOpenlog: TConsultaOcorrenciaOpenlog;
+  FormGeradorTwig: TGeradorTwig;
 implementation
 
 {$R *.dfm}
@@ -192,6 +196,16 @@ begin
   end;
 end;
 
+procedure TFormPrincipal.GeradordeTwig1Click(Sender: TObject);
+begin
+  FormGeradorTwig := TGeradorTwig.Create(Self);
+  try
+    FormGeradorTwig.ShowModal;
+  finally
+    FormGeradorTwig.Free; // Libera a memória usada
+  end;
+end;
+
 procedure TFormPrincipal.GerarLinkJWTPortalBW1Click(Sender: TObject);
 begin
   FormGerarTokenJWT := TGerarTokenJWT.Create(Self);
@@ -232,13 +246,23 @@ begin
   end;
 end;
 
-procedure TFormPrincipal.Openlog1Click(Sender: TObject);
+procedure TFormPrincipal.Azul1Click(Sender: TObject);
 begin
   FormConsultaOcorrenciaAzul := TConsultaOcorrenciaAzul.Create(Self);
   try
     FormConsultaOcorrenciaAzul.ShowModal;
   finally
     FormConsultaOcorrenciaAzul.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.OpenlogEngloba1Click(Sender: TObject);
+begin
+  FormConsultaOcorrenciaOpenlog := TConsultaOcorrenciaOpenlog.Create(Self);
+  try
+    FormConsultaOcorrenciaOpenlog.ShowModal;
+  finally
+    FormConsultaOcorrenciaOpenlog.Free; // Libera a memória usada
   end;
 end;
 

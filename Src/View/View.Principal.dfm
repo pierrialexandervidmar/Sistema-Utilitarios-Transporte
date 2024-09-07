@@ -16033,11 +16033,12 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Total XML x Total Cota'#231#227'o'
         OnClick = otalXMLxTotalCotao1Click
       end
+      object GeradordeTwig1: TMenuItem
+        Caption = 'Gerador de Twig'
+        OnClick = GeradordeTwig1Click
+      end
       object ValidadordeCSV1: TMenuItem
         Caption = 'Validador de CSV *'
-      end
-      object GeradordeTwig1: TMenuItem
-        Caption = 'Gerador de Twig *'
       end
       object AnlisedeCotaes1: TMenuItem
         Caption = 'An'#225'lise de Cota'#231#245'es *'
@@ -16048,9 +16049,9 @@ object FormPrincipal: TFormPrincipal
     end
     object Ocorrncias1: TMenuItem
       Caption = 'Ocorr'#234'ncias'
-      object Openlog1: TMenuItem
+      object Azul1: TMenuItem
         Caption = 'Azul '
-        OnClick = Openlog1Click
+        OnClick = Azul1Click
       end
       object Braspress1: TMenuItem
         Caption = 'Braspress'
@@ -16068,11 +16069,12 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Jadlog'
         OnClick = Jadlog1Click
       end
+      object OpenlogEngloba1: TMenuItem
+        Caption = 'Openlog / Engloba'
+        OnClick = OpenlogEngloba1Click
+      end
       object Carriers1: TMenuItem
         Caption = 'Carriers *'
-      end
-      object Openlog2: TMenuItem
-        Caption = 'Openlog *'
       end
       object SSW1: TMenuItem
         Caption = 'SSW *'

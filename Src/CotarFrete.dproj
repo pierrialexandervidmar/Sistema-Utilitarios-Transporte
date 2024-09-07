@@ -196,6 +196,14 @@
             <Form>CotacaoJadlog</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="View\View.ConsultaOcorrenciaOpenlog.pas">
+            <Form>ConsultaOcorrenciaOpenlog</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\View.GeradorTwig.pas">
+            <Form>GeradorTwig</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

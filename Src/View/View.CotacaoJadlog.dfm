@@ -136,7 +136,7 @@ object CotacaoJadlog: TCotacaoJadlog
   object Label10: TLabel
     Left = 24
     Top = 352
-    Width = 105
+    Width = 98
     Height = 17
     Caption = 'Token da Jadlog'
     Font.Charset = ANSI_CHARSET
