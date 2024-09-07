@@ -8,7 +8,7 @@ uses
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog, View.ConsultaOcorrenciaBuslog,
   View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona, View.AutenticarCorreios,
-  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog, View.ConsultaOcorrenciaOpenlog, View.GeradorTwig;
+  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog, View.ConsultaOcorrenciaOpenlog, View.GeradorTwig, View.CotacaoOpenlogEngloba;
 
 type
   TFormPrincipal = class(TForm)
@@ -48,9 +48,9 @@ type
     Cotaes1: TMenuItem;
     JadLog2: TMenuItem;
     SSW2: TMenuItem;
-    Openlog3: TMenuItem;
     NT1: TMenuItem;
     OpenlogEngloba1: TMenuItem;
+    OpenlogEngloba2: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -72,6 +72,7 @@ type
     procedure OpenlogEngloba1Click(Sender: TObject);
     procedure Azul1Click(Sender: TObject);
     procedure GeradordeTwig1Click(Sender: TObject);
+    procedure OpenlogEngloba2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -98,6 +99,7 @@ var
   FormCotacaoJadlog: TCotacaoJadlog;
   FormConsultaOcorrenciaOpenlog: TConsultaOcorrenciaOpenlog;
   FormGeradorTwig: TGeradorTwig;
+  FormCotacaoOpenlogEngloba: TCotacaoOpenlogEngloba;
 implementation
 
 {$R *.dfm}
@@ -256,6 +258,16 @@ begin
   end;
 end;
 
+//procedure TFormPrincipal.Openlog3Click(Sender: TObject);
+//begin
+//  FormCotacaoOpenlogEngloba := TCotacaoOpenlogEngloba.Create(Self);
+//  try
+//    FormCotacaoOpenlogEngloba.ShowModal;
+//  finally
+//    FormCotacaoOpenlogEngloba.Free; // Libera a memória usada
+//  end;
+//end;
+
 procedure TFormPrincipal.OpenlogEngloba1Click(Sender: TObject);
 begin
   FormConsultaOcorrenciaOpenlog := TConsultaOcorrenciaOpenlog.Create(Self);
@@ -263,6 +275,16 @@ begin
     FormConsultaOcorrenciaOpenlog.ShowModal;
   finally
     FormConsultaOcorrenciaOpenlog.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.OpenlogEngloba2Click(Sender: TObject);
+begin
+  FormCotacaoOpenlogEngloba := TCotacaoOpenlogEngloba.Create(Self);
+  try
+    FormCotacaoOpenlogEngloba.ShowModal;
+  finally
+    FormCotacaoOpenlogEngloba.Free; // Libera a memória usada
   end;
 end;
 

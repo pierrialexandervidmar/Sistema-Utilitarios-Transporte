@@ -16090,11 +16090,12 @@ object FormPrincipal: TFormPrincipal
         Caption = 'SSW'
         OnClick = SSW2Click
       end
-      object Openlog3: TMenuItem
-        Caption = 'Openlog *'
-      end
       object NT1: TMenuItem
         Caption = 'TNT *'
+      end
+      object OpenlogEngloba2: TMenuItem
+        Caption = 'Openlog / Engloba'
+        OnClick = OpenlogEngloba2Click
       end
     end
     object Sair1: TMenuItem
