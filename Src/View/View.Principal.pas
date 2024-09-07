@@ -7,7 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus, REST.Types,
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog, View.ConsultaOcorrenciaBuslog,
-  View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona, View.AutenticarCorreios;
+  View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona, View.AutenticarCorreios,
+  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog;
 
 type
   TFormPrincipal = class(TForm)
@@ -45,6 +46,11 @@ type
     otalXMLxTotalCotao1: TMenuItem;
     estedeAutenticaoCorreios1: TMenuItem;
     Buslog1: TMenuItem;
+    Cotaes1: TMenuItem;
+    JadLog2: TMenuItem;
+    SSW2: TMenuItem;
+    Openlog3: TMenuItem;
+    NT1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -61,6 +67,9 @@ type
     procedure Daytona1Click(Sender: TObject);
     procedure estedeAutenticaoCorreios1Click(Sender: TObject);
     procedure Buslog1Click(Sender: TObject);
+    procedure Jadlog1Click(Sender: TObject);
+    procedure SSW2Click(Sender: TObject);
+    procedure JadLog2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -83,6 +92,8 @@ var
   FormConsultaOcorrenciaDaytona: TConsultaOcorrenciaDaytona;
   FormAutenticarCorreios: TAutenticarCorreios;
   FormConsultaOcorrenciaBuslog: TConsultaOcorrenciaBuslog;
+  FormConsultaOcorrenciaJadlog: TFormConsultaOcorrenciaJadlog;
+  FormCotacaoJadlog: TCotacaoJadlog;
 implementation
 
 {$R *.dfm}
@@ -191,6 +202,26 @@ begin
   end;
 end;
 
+procedure TFormPrincipal.Jadlog1Click(Sender: TObject);
+begin
+  FormConsultaOcorrenciaJadlog := TFormConsultaOcorrenciaJadlog.Create(Self);
+  try
+    FormConsultaOcorrenciaJadlog.ShowModal;
+  finally
+    FormConsultaOcorrenciaJadlog.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.JadLog2Click(Sender: TObject);
+begin
+  FormCotacaoJadlog := TCotacaoJadlog.Create(Self);
+  try
+    FormCotacaoJadlog.ShowModal;
+  finally
+    FormCotacaoJadlog.Free; // Libera a memória usada
+  end;
+end;
+
 procedure TFormPrincipal.MelhorEnvio1Click(Sender: TObject);
 begin
   FormConsultasMelhorEnvio := TConsultasMelhorEnvio.Create(Self);
@@ -224,6 +255,16 @@ end;
 procedure TFormPrincipal.Sair1Click(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TFormPrincipal.SSW2Click(Sender: TObject);
+begin
+  FormTesteSSW := TTesteSSW.Create(Self);
+  try
+    FormTesteSSW.ShowModal;
+  finally
+    FormTesteSSW.Free; // Libera a memória usada
+  end;
 end;
 
 procedure TFormPrincipal.Timer1Timer(Sender: TObject);

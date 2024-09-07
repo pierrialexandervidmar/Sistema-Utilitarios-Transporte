@@ -16,7 +16,9 @@ uses
   View.ConsultaOcorrenciaBraspress in 'View\View.ConsultaOcorrenciaBraspress.pas' {ConsultaOcorrenciaBraspress},
   View.ConsultaOcorrenciaDaytona in 'View\View.ConsultaOcorrenciaDaytona.pas' {ConsultaOcorrenciaDaytona},
   View.AutenticarCorreios in 'View\View.AutenticarCorreios.pas' {AutenticarCorreios},
-  View.ConsultaOcorrenciaBuslog in 'View\View.ConsultaOcorrenciaBuslog.pas' {ConsultaOcorrenciaBuslog};
+  View.ConsultaOcorrenciaBuslog in 'View\View.ConsultaOcorrenciaBuslog.pas' {ConsultaOcorrenciaBuslog},
+  View.ConsultaOcorrenciaJadlog in 'View\View.ConsultaOcorrenciaJadlog.pas' {FormConsultaOcorrenciaJadlog},
+  View.CotacaoJadlog in 'View\View.CotacaoJadlog.pas' {CotacaoJadlog};
 
 {$R *.res}
 

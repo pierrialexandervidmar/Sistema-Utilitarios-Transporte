@@ -14927,8 +14927,7 @@ object FormPrincipal: TFormPrincipal
       0D1BA7248EA52FB03A011B36E647584060C3860D1B366CD838A561EA0BAC4EC0
       868DF9151610D8B061C3860D1B364E4B507D415C08DBAD4EC0868DF915FF1395
       7EBDE4C93B2F4F0000000049454E44AE426082}
-    ExplicitTop = 56
-    ExplicitHeight = 569
+    ExplicitTop = 31
   end
   object Image2: TImage
     Left = 0
@@ -16065,17 +16064,35 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Daytona'
         OnClick = Daytona1Click
       end
+      object Jadlog1: TMenuItem
+        Caption = 'Jadlog'
+        OnClick = Jadlog1Click
+      end
       object Carriers1: TMenuItem
         Caption = 'Carriers *'
-      end
-      object Jadlog1: TMenuItem
-        Caption = 'Jadlog *'
       end
       object Openlog2: TMenuItem
         Caption = 'Openlog *'
       end
       object SSW1: TMenuItem
         Caption = 'SSW *'
+      end
+    end
+    object Cotaes1: TMenuItem
+      Caption = 'Cota'#231#245'es'
+      object JadLog2: TMenuItem
+        Caption = 'JadLog'
+        OnClick = JadLog2Click
+      end
+      object SSW2: TMenuItem
+        Caption = 'SSW'
+        OnClick = SSW2Click
+      end
+      object Openlog3: TMenuItem
+        Caption = 'Openlog *'
+      end
+      object NT1: TMenuItem
+        Caption = 'TNT *'
       end
     end
     object Sair1: TMenuItem

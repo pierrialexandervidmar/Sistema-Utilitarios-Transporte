@@ -188,6 +188,14 @@
             <Form>ConsultaOcorrenciaBuslog</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="View\View.ConsultaOcorrenciaJadlog.pas">
+            <Form>FormConsultaOcorrenciaJadlog</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="View\View.CotacaoJadlog.pas">
+            <Form>CotacaoJadlog</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
