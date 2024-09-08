@@ -128,87 +128,87 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="View\View.Principal.pas">
+        <DCCReference Include="Src\View\View.Principal.pas">
             <Form>FormPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaCnpj.pas">
+        <DCCReference Include="Src\View\View.ConsultaCnpj.pas">
             <Form>ConsultaCnpj</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultasMelhorEnvio.pas">
+        <DCCReference Include="Src\View\View.ConsultasMelhorEnvio.pas">
             <Form>ConsultasMelhorEnvio</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaCredencialAzul.pas">
+        <DCCReference Include="Src\View\View.ConsultaCredencialAzul.pas">
             <Form>ConsultaCredencialAzul</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaServicosKangu.pas">
+        <DCCReference Include="Src\View\View.ConsultaServicosKangu.pas">
             <Form>ConsultaServicosKangu</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.CalculoPortalTransportes.pas">
+        <DCCReference Include="Src\View\View.CalculoPortalTransportes.pas">
             <Form>CalculoPortalTransportes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultasServicosFlixLog.pas">
+        <DCCReference Include="Src\View\View.ConsultasServicosFlixLog.pas">
             <Form>ConsultasServicosFlixLog</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.TesteSSW.pas">
+        <DCCReference Include="Src\View\View.TesteSSW.pas">
             <Form>TesteSSW</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.GerarTokenJWT.pas">
+        <DCCReference Include="Src\View\View.GerarTokenJWT.pas">
             <Form>GerarTokenJWT</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.DeParaXmlCte.pas">
+        <DCCReference Include="Src\View\View.DeParaXmlCte.pas">
             <Form>DeParaXmlCte</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaOcorrenciaAzul.pas">
+        <DCCReference Include="Src\View\View.ConsultaOcorrenciaAzul.pas">
             <Form>ConsultaOcorrenciaAzul</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaOcorrenciaBraspress.pas">
+        <DCCReference Include="Src\View\View.ConsultaOcorrenciaBraspress.pas">
             <Form>ConsultaOcorrenciaBraspress</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaOcorrenciaDaytona.pas">
+        <DCCReference Include="Src\View\View.ConsultaOcorrenciaDaytona.pas">
             <Form>ConsultaOcorrenciaDaytona</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.AutenticarCorreios.pas">
+        <DCCReference Include="Src\View\View.AutenticarCorreios.pas">
             <Form>AutenticarCorreios</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaOcorrenciaBuslog.pas">
+        <DCCReference Include="Src\View\View.ConsultaOcorrenciaBuslog.pas">
             <Form>ConsultaOcorrenciaBuslog</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaOcorrenciaJadlog.pas">
+        <DCCReference Include="Src\View\View.ConsultaOcorrenciaJadlog.pas">
             <Form>FormConsultaOcorrenciaJadlog</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.CotacaoJadlog.pas">
+        <DCCReference Include="Src\View\View.CotacaoJadlog.pas">
             <Form>CotacaoJadlog</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaOcorrenciaOpenlog.pas">
+        <DCCReference Include="Src\View\View.ConsultaOcorrenciaOpenlog.pas">
             <Form>ConsultaOcorrenciaOpenlog</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.GeradorTwig.pas">
+        <DCCReference Include="Src\View\View.GeradorTwig.pas">
             <Form>GeradorTwig</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.CotacaoOpenlogEngloba.pas">
+        <DCCReference Include="Src\View\View.CotacaoOpenlogEngloba.pas">
             <Form>CotacaoOpenlogEngloba</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="View\View.ConsultaOcorrenciaCarriers.pas">
+        <DCCReference Include="Src\View\View.ConsultaOcorrenciaCarriers.pas">
             <Form>ConsultaOcorrenciaCarriers</Form>
             <FormType>dfm</FormType>
         </DCCReference>
