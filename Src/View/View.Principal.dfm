@@ -16074,7 +16074,8 @@ object FormPrincipal: TFormPrincipal
         OnClick = OpenlogEngloba1Click
       end
       object Carriers1: TMenuItem
-        Caption = 'Carriers *'
+        Caption = 'Carriers'
+        OnClick = Carriers1Click
       end
       object SSW1: TMenuItem
         Caption = 'SSW *'
@@ -16090,12 +16091,12 @@ object FormPrincipal: TFormPrincipal
         Caption = 'SSW'
         OnClick = SSW2Click
       end
-      object NT1: TMenuItem
-        Caption = 'TNT *'
-      end
       object OpenlogEngloba2: TMenuItem
         Caption = 'Openlog / Engloba'
         OnClick = OpenlogEngloba2Click
+      end
+      object NT1: TMenuItem
+        Caption = 'TNT *'
       end
     end
     object Sair1: TMenuItem

@@ -21,7 +21,8 @@ uses
   View.CotacaoJadlog in 'View\View.CotacaoJadlog.pas' {CotacaoJadlog},
   View.ConsultaOcorrenciaOpenlog in 'View\View.ConsultaOcorrenciaOpenlog.pas' {ConsultaOcorrenciaOpenlog},
   View.GeradorTwig in 'View\View.GeradorTwig.pas' {GeradorTwig},
-  View.CotacaoOpenlogEngloba in 'View\View.CotacaoOpenlogEngloba.pas' {CotacaoOpenlogEngloba};
+  View.CotacaoOpenlogEngloba in 'View\View.CotacaoOpenlogEngloba.pas' {CotacaoOpenlogEngloba},
+  View.ConsultaOcorrenciaCarriers in 'View\View.ConsultaOcorrenciaCarriers.pas' {ConsultaOcorrenciaCarriers};
 
 {$R *.res}
 
@@ -29,5 +30,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TConsultaOcorrenciaCarriers, ConsultaOcorrenciaCarriers);
   Application.Run;
 end.

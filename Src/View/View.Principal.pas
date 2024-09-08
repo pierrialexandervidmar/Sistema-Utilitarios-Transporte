@@ -8,7 +8,7 @@ uses
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog, View.ConsultaOcorrenciaBuslog,
   View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona, View.AutenticarCorreios,
-  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog, View.ConsultaOcorrenciaOpenlog, View.GeradorTwig, View.CotacaoOpenlogEngloba;
+  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog, View.ConsultaOcorrenciaOpenlog, View.GeradorTwig, View.CotacaoOpenlogEngloba, View.ConsultaOcorrenciaCarriers;
 
 type
   TFormPrincipal = class(TForm)
@@ -73,6 +73,7 @@ type
     procedure Azul1Click(Sender: TObject);
     procedure GeradordeTwig1Click(Sender: TObject);
     procedure OpenlogEngloba2Click(Sender: TObject);
+    procedure Carriers1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -100,6 +101,7 @@ var
   FormConsultaOcorrenciaOpenlog: TConsultaOcorrenciaOpenlog;
   FormGeradorTwig: TGeradorTwig;
   FormCotacaoOpenlogEngloba: TCotacaoOpenlogEngloba;
+  FormConsultaOcorrenciaCarriers: TConsultaOcorrenciaCarriers;
 implementation
 
 {$R *.dfm}
@@ -125,6 +127,16 @@ begin
     FormConsultaOcorrenciaBuslog.ShowModal;
   finally
     FormConsultaOcorrenciaBuslog.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.Carriers1Click(Sender: TObject);
+begin
+  FormConsultaOcorrenciaCarriers := TConsultaOcorrenciaCarriers.Create(Self);
+  try
+    FormConsultaOcorrenciaCarriers.ShowModal;
+  finally
+    FormConsultaOcorrenciaCarriers.Free; // Libera a memória usada
   end;
 end;
 

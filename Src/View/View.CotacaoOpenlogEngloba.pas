@@ -35,6 +35,7 @@ type
     RESTResponse1: TRESTResponse;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure BtnConsultarClick(Sender: TObject);
+    procedure BtnLimparClick(Sender: TObject);
   private
     function FormatJson(const JsonString: string): string;
     function CleanInput(const AText: string): string;
@@ -48,6 +49,22 @@ var
 
 implementation
 {$R *.dfm}
+
+procedure TCotacaoOpenlogEngloba.BtnLimparClick(Sender: TObject);
+begin
+  EditCep.Clear;
+  EditValor.Clear;
+  EditPeso.Clear;
+  EditAltura.Clear;
+  EditLargura.Clear;
+  EditComprimento.Clear;
+
+  MemoTokenAPI.Clear;
+  DadosOpenlog.Clear;
+
+  EditCep.SetFocus;
+end;
+
 
 function TCotacaoOpenlogEngloba.CleanInput(const AText: string): string;
 begin

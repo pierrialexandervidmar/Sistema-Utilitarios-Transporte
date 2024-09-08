@@ -1506,6 +1506,7 @@ object CotacaoOpenlogEngloba: TCotacaoOpenlogEngloba
     Height = 25
     Caption = 'Limpar'
     TabOrder = 9
+    OnClick = BtnLimparClick
   end
   object RESTClient1: TRESTClient
     Params = <>
