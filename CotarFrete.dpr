@@ -22,7 +22,8 @@ uses
   View.ConsultaOcorrenciaOpenlog in 'Src\View\View.ConsultaOcorrenciaOpenlog.pas' {ConsultaOcorrenciaOpenlog},
   View.GeradorTwig in 'Src\View\View.GeradorTwig.pas' {GeradorTwig},
   View.CotacaoOpenlogEngloba in 'Src\View\View.CotacaoOpenlogEngloba.pas' {CotacaoOpenlogEngloba},
-  View.ConsultaOcorrenciaCarriers in 'Src\View\View.ConsultaOcorrenciaCarriers.pas' {ConsultaOcorrenciaCarriers};
+  View.ConsultaOcorrenciaCarriers in 'Src\View\View.ConsultaOcorrenciaCarriers.pas' {ConsultaOcorrenciaCarriers},
+  View.ConsultaOcorrenciaSSW in 'Src\View\View.ConsultaOcorrenciaSSW.pas' {ConsultaOcorrenciaSSW};
 
 {$R *.res}
 
@@ -31,5 +32,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
   Application.CreateForm(TConsultaOcorrenciaCarriers, ConsultaOcorrenciaCarriers);
+  Application.CreateForm(TConsultaOcorrenciaSSW, ConsultaOcorrenciaSSW);
   Application.Run;
 end.

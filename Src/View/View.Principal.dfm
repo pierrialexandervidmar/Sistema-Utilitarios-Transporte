@@ -16079,7 +16079,11 @@ object FormPrincipal: TFormPrincipal
         OnClick = Carriers1Click
       end
       object SSW1: TMenuItem
-        Caption = 'SSW *'
+        Caption = 'SSW'
+        OnClick = SSW1Click
+      end
+      object otalExpress1: TMenuItem
+        Caption = 'Total Express *'
       end
     end
     object Cotaes1: TMenuItem

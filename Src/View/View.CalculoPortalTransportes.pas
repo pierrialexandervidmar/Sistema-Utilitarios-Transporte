@@ -104,20 +104,6 @@ begin
     JSONProduto.AddPair('valor', TJSONNumber.Create(StrToFloat(EditValor.Text)));
     JSONProduto.AddPair('volumes', TJSONNumber.Create(1)); // Por exemplo, fixado como 1
 
-    // Criar JSON para volumesDetalhes
-//    JSONVolumeDetalhes := TJSONObject.Create;
-//    JSONVolumeDetalhes.AddPair('peso', TJSONNumber.Create(StrToFloat(EditPeso.Text)));
-//    JSONVolumeDetalhes.AddPair('altura', TJSONNumber.Create(StrToFloat(EditAltura.Text)));
-//    JSONVolumeDetalhes.AddPair('largura', TJSONNumber.Create(StrToFloat(EditLargura.Text)));
-//    JSONVolumeDetalhes.AddPair('comprimento', TJSONNumber.Create(StrToFloat(EditComprimento.Text)));
-
-//    // Criar JSON Array para volumesDetalhes
-//    JSONArrayVolumesDetalhes := TJSONArray.Create;
-//    JSONArrayVolumesDetalhes.AddElement(JSONVolumeDetalhes);
-
-    // Adicionar volumesDetalhes ao produto
-//    JSONProduto.AddPair('volumesDetalhes', JSONArrayVolumesDetalhes);
-
     // Criar JSON Array para produtos
     JSONArrayProdutos := TJSONArray.Create;
     JSONArrayProdutos.AddElement(JSONProduto);
