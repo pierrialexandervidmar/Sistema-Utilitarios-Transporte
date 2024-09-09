@@ -13,6 +13,7 @@ object FormPrincipal: TFormPrincipal
   Menu = MainMenu1
   Position = poDesktopCenter
   WindowState = wsMaximized
+  OnCreate = FormCreate
   DesignSize = (
     1292
     644)

@@ -74,6 +74,7 @@ type
     procedure GeradordeTwig1Click(Sender: TObject);
     procedure OpenlogEngloba2Click(Sender: TObject);
     procedure Carriers1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -208,6 +209,11 @@ begin
   finally
     FormAutenticarCorreios.Free; // Libera a memória usada
   end;
+end;
+
+procedure TFormPrincipal.FormCreate(Sender: TObject);
+begin
+  ReportMemoryLeaksOnShutdown := True;
 end;
 
 procedure TFormPrincipal.GeradordeTwig1Click(Sender: TObject);
