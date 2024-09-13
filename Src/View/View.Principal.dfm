@@ -16031,7 +16031,7 @@ object FormPrincipal: TFormPrincipal
     object Ferramentas1: TMenuItem
       Caption = 'Ferramentas'
       object otalXMLxTotalCotao1: TMenuItem
-        Caption = 'Total XML x Total Cota'#231#227'o'
+        Caption = 'An'#225'lise de CTE'
         OnClick = otalXMLxTotalCotao1Click
       end
       object GeradordeTwig1: TMenuItem

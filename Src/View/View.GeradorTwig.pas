@@ -62,7 +62,10 @@ end;
 {$R *.dfm}
 
 procedure TGeradorTwig.BtnGerarClick(Sender: TObject);
+var
+  prazoAdicional: Integer;
 begin
+  prazoAdicional := StrToIntDef(Trim(EditPrazoAdicional.Text), 0);
   // Monta o conteúdo do Twig com os valores coletados dos campos
   ResultadoTwig.Lines.Text :=
     'Cadastrando a pessoa' + sLineBreak +
@@ -140,7 +143,7 @@ begin
     '  {% set transportadoraAgenciaServico = transportadoraAgencia.newTransportadoraAgenciaServico() %}' + sLineBreak +
     '      {{ transportadoraAgenciaServico.setTransportadoraServico(transportadoraServico) }}' + sLineBreak +
     '      {{ transportadoraAgenciaServico.setCodigoServico(''' + Trim(EditSigla.Text) + ''') }}' + sLineBreak +
-    '      {{ transportadoraAgenciaServico.setPrazoAdicional(''' + Trim(EditPrazoAdicional.Text) + ''') }}' + sLineBreak +
+    '      {{ transportadoraAgenciaServico.setPrazoAdicional(' + IntToStr(prazoAdicional) + ') }}' + sLineBreak +
     '      {{ transportadoraAgenciaServico.setAtivo(true) }}' + sLineBreak +
     '      {{ transportadoraAgenciaServico.getConfiguracao().setModalidadeFreteNF(0) }}' + sLineBreak +
     '  {{ em.persist(transportadoraAgencia) }}' + sLineBreak +
