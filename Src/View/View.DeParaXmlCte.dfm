@@ -4,8 +4,8 @@ object DeParaXmlCte: TDeParaXmlCte
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Totais XML x Cota'#231#227'o Magazord'
-  ClientHeight = 761
-  ClientWidth = 1184
+  ClientHeight = 661
+  ClientWidth = 1072
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,19 +16,6 @@ object DeParaXmlCte: TDeParaXmlCte
   Position = poMainFormCenter
   OnKeyDown = FormKeyDown
   TextHeight = 15
-  object Label1: TLabel
-    Left = 936
-    Top = 16
-    Width = 225
-    Height = 32
-    Caption = 'Em desenvolvimento'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -24
-    Font.Name = 'Segoe UI Semibold'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
   object lbl1: TLabel
     Left = 23
     Top = 98
@@ -56,7 +43,7 @@ object DeParaXmlCte: TDeParaXmlCte
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 456
+    Left = 360
     Top = 98
     Width = 206
     Height = 21
@@ -69,7 +56,7 @@ object DeParaXmlCte: TDeParaXmlCte
     ParentFont = False
   end
   object lbl3: TLabel
-    Left = 832
+    Left = 721
     Top = 98
     Width = 244
     Height = 21
@@ -77,6 +64,18 @@ object DeParaXmlCte: TDeParaXmlCte
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LblCaminhoXML: TLabel
+    Left = 23
+    Top = 6
+    Width = 3
+    Height = 15
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
     Font.Name = 'Segoe UI Semibold'
     Font.Style = [fsBold]
     ParentFont = False
@@ -93,13 +92,13 @@ object DeParaXmlCte: TDeParaXmlCte
   object DadosCotacao: TMemo
     Left = 23
     Top = 125
-    Width = 338
-    Height = 612
+    Width = 266
+    Height = 500
     ScrollBars = ssVertical
     TabOrder = 1
   end
   object BtnAnalisar: TBitBtn
-    Left = 328
+    Left = 360
     Top = 43
     Width = 193
     Height = 33
@@ -108,22 +107,34 @@ object DeParaXmlCte: TDeParaXmlCte
     OnClick = BtnAnalisarClick
   end
   object DadosResumoXML: TMemo
-    Left = 456
+    Left = 360
     Top = 125
-    Width = 300
-    Height = 321
+    Width = 320
+    Height = 500
+    ScrollBars = ssVertical
     TabOrder = 3
   end
   object DadosResumoCotacao: TMemo
-    Left = 832
+    Left = 721
     Top = 125
-    Width = 300
-    Height = 321
+    Width = 320
+    Height = 500
+    ScrollBars = ssVertical
     TabOrder = 4
   end
+  object pnl1: TPanel
+    Left = 325
+    Top = 21
+    Width = 2
+    Height = 604
+    BevelOuter = bvNone
+    Color = clHighlight
+    ParentBackground = False
+    TabOrder = 5
+  end
   object OpenDialog1: TOpenDialog
-    Left = 168
-    Top = 48
+    Left = 272
+    Top = 8
   end
   object XMLDocument1: TXMLDocument
     Left = 616

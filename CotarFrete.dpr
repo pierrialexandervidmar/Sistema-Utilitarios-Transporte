@@ -31,7 +31,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
-  Application.CreateForm(TConsultaOcorrenciaCarriers, ConsultaOcorrenciaCarriers);
-  Application.CreateForm(TConsultaOcorrenciaSSW, ConsultaOcorrenciaSSW);
   Application.Run;
 end.
