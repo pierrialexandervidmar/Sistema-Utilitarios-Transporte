@@ -88,6 +88,8 @@ begin
   XMLNode := XMLDocument1.DocumentElement.ChildNodes['CTe'].ChildNodes['infCte'];
 
   // Leitura das tags, considerando o namespace
+  DadosResumoXML.Lines.Add('CEP de Origem: ' + XMLNode.ChildNodes['rem'].ChildNodes['enderReme'].ChildNodes['CEP'].Text);
+  DadosResumoXML.Lines.Add('CEP de Destino: ' + XMLNode.ChildNodes['dest'].ChildNodes['enderDest'].ChildNodes['CEP'].Text);
   DadosResumoXML.Lines.Add('Valor do Frete: ' + XMLNode.ChildNodes['vPrest'].ChildNodes['vTPrest'].Text);
   DadosResumoXML.Lines.Add('Valor do ICMS: ' + XMLNode.ChildNodes['imp'].ChildNodes['ICMS'].ChildNodes['ICMS00'].ChildNodes['vICMS'].Text);
   DadosResumoXML.Lines.Add('Valor da Carga (mercadorias): ' + XMLNode.ChildNodes['infCarga'].ChildNodes['vCarga'].Text);
