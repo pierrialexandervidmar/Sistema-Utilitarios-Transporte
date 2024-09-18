@@ -32,8 +32,6 @@ type
     Label10: TLabel;
     Label11: TLabel;
     EditCodigoMercadoria: TEdit;
-    LabelCEPDestinatario: TLabel;
-    EditCNPJCEPDestinatario: TEdit;
     BtnConsultar: TButton;
     BtnLimpar: TButton;
     Label12: TLabel;
@@ -95,7 +93,6 @@ begin
   EditPeso.Text := '';
   EditVolume.Text := '';
   EditCodigoMercadoria.Text := '';
-  EditCNPJCEPDestinatario.Text := '';
 
   // Limpa o conteúdo do RichEdit
   RichEdit1.Clear;
@@ -244,7 +241,6 @@ begin
 
   // Limpa CNPJs removendo caracteres não numéricos
   EditCNPJPagador.Text := CleanCNPJ(EditCNPJPagador.Text);
-  EditCNPJCEPDestinatario.Text := CleanCNPJ(EditCNPJCEPDestinatario.Text);
 
   // Monta o XML de requisição
   RequestXML := TStringStream.Create(
@@ -266,7 +262,7 @@ begin
     '<peso xsi:type="xsd:decimal">' + EditPeso.Text + '</peso>' +
     '<volume xsi:type="xsd:decimal">' + EditVolume.Text + '</volume>' +
     '<mercadoria xsi:type="xsd:integer">' + EditCodigoMercadoria.Text + '</mercadoria>' +
-    '<cnpjDestinatario xsi:type="xsd:string">' + EditCNPJCEPDestinatario.Text + '</cnpjDestinatario>' +
+    '<cnpjDestinatario xsi:type="xsd:string">86784208048</cnpjDestinatario>' +
     '<coletar xsi:type="xsd:string">S</coletar>' +
     '<entDificil xsi:type="xsd:string">N</entDificil>' +
     '<destContribuinte xsi:type="xsd:string">N</destContribuinte>' +
