@@ -53,6 +53,7 @@ type
     OpenlogEngloba2: TMenuItem;
     otalExpress1: TMenuItem;
     CotaoviaPortaldeTransportes2: TMenuItem;
+    Loggi1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);

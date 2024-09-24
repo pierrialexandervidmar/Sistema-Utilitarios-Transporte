@@ -60,7 +60,8 @@ var
   JSONArrayProdutos, JSONArrayServicos, JSONArrayVolumesDetalhes: TJSONArray;
   JSONResponse, JSONRequest: TJSONObject;
   FormattedJSON: string;
-  CEPOrigemFormatado, CEPDestinoFormatado: string;
+  CEPOrigemFormatado, CEPDestinoFormatado, Sigla: string;
+  SiglasList: TStringList;
 begin
   // Limpar o memo antes de exibir os resultados da nova requisição
   DadosCalculoFrete.Clear;
@@ -111,9 +112,24 @@ begin
     // Adicionar produtos ao JSON Body
     JSONBody.AddPair('produtos', JSONArrayProdutos);
 
+
     // Criar JSON Array para servicos
     JSONArrayServicos := TJSONArray.Create;
-    JSONArrayServicos.AddElement(TJSONString.Create(EditSigla.Text)); // Adiciona o serviço como string ao array
+
+    // Criar uma TStringList para armazenar as siglas
+    SiglasList := TStringList.Create;
+    try
+      // Separar as siglas por vírgula
+      SiglasList.CommaText := EditSigla.Text;
+
+      // Adicionar cada sigla ao array JSON
+      for Sigla in SiglasList do
+      begin
+        JSONArrayServicos.AddElement(TJSONString.Create(Trim(Sigla)));
+      end;
+    finally
+      SiglasList.Free;
+    end;
 
     // Adicionar servicos ao JSON Body
     JSONBody.AddPair('servicos', JSONArrayServicos);

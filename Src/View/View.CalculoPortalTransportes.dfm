@@ -152,9 +152,9 @@ object CalculoPortalTransportes: TCalculoPortalTransportes
   object Label12: TLabel
     Left = 24
     Top = 368
-    Width = 144
+    Width = 305
     Height = 17
-    Caption = 'Sigla da Transportadora'
+    Caption = 'Siglas das Transportadoras (separadas por v'#237'rgula)'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -234,7 +234,7 @@ object CalculoPortalTransportes: TCalculoPortalTransportes
   object EditSigla: TEdit
     Left = 24
     Top = 391
-    Width = 121
+    Width = 463
     Height = 23
     CharCase = ecUpperCase
     TabOrder = 8
@@ -250,18 +250,18 @@ object CalculoPortalTransportes: TCalculoPortalTransportes
   end
   object BtnConsultar: TButton
     Left = 24
-    Top = 464
-    Width = 75
-    Height = 25
+    Top = 456
+    Width = 110
+    Height = 33
     Caption = 'Consultar'
     TabOrder = 9
     OnClick = BtnConsultarClick
   end
   object BtnLimpar: TButton
-    Left = 128
-    Top = 464
-    Width = 75
-    Height = 25
+    Left = 155
+    Top = 456
+    Width = 110
+    Height = 33
     Caption = 'Limpar'
     TabOrder = 11
     OnClick = BtnLimparClick
