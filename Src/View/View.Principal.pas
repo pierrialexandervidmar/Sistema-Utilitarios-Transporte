@@ -52,6 +52,8 @@ type
     OpenlogEngloba1: TMenuItem;
     OpenlogEngloba2: TMenuItem;
     otalExpress1: TMenuItem;
+    CotaoviaPortaldeTransportes2: TMenuItem;
+    Loggi1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -77,6 +79,7 @@ type
     procedure Carriers1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SSW1Click(Sender: TObject);
+    procedure CotaoviaPortaldeTransportes2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -175,6 +178,16 @@ begin
 end;
 
 procedure TFormPrincipal.CotaoviaPortaldeTransportes1Click(Sender: TObject);
+begin
+  FormCalculoPortalTransportes := TCalculoPortalTransportes.Create(Self);
+  try
+    FormCalculoPortalTransportes.ShowModal;
+  finally
+    FormCalculoPortalTransportes.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.CotaoviaPortaldeTransportes2Click(Sender: TObject);
 begin
   FormCalculoPortalTransportes := TCalculoPortalTransportes.Create(Self);
   try

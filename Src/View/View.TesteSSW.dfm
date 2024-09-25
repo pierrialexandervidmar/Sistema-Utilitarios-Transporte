@@ -160,19 +160,6 @@ object TesteSSW: TTesteSSW
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object LabelCEPDestinatario: TLabel
-    Left = 23
-    Top = 472
-    Width = 174
-    Height = 17
-    Caption = 'CPF ou CNPJ do Destinat'#225'rio'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Segoe UI Semibold'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
   object Label12: TLabel
     Left = 267
     Top = 8
@@ -264,29 +251,22 @@ object TesteSSW: TTesteSSW
     Height = 23
     TabOrder = 10
   end
-  object EditCNPJCEPDestinatario: TEdit
-    Left = 24
-    Top = 495
-    Width = 160
-    Height = 23
-    TabOrder = 11
-  end
   object BtnConsultar: TButton
     Left = 24
-    Top = 552
-    Width = 75
-    Height = 25
+    Top = 536
+    Width = 100
+    Height = 41
     Caption = 'Consultar'
-    TabOrder = 12
+    TabOrder = 11
     OnClick = BtnConsultarClick
   end
   object BtnLimpar: TButton
-    Left = 122
-    Top = 552
-    Width = 75
-    Height = 25
+    Left = 144
+    Top = 536
+    Width = 95
+    Height = 41
     Caption = 'Limpar'
-    TabOrder = 13
+    TabOrder = 12
     OnClick = BtnLimparClick
   end
   object RichEdit1: TRichEdit
@@ -302,7 +282,7 @@ object TesteSSW: TTesteSSW
     Font.Style = []
     ParentFont = False
     ScrollBars = ssVertical
-    TabOrder = 14
+    TabOrder = 13
   end
   object HTTPRIO1: THTTPRIO
     Converter.Options = [soSendMultiRefObj, soTryAllSchema, soRootRefNodesToBody, soCacheMimeResponse, soUTF8EncodeXML]

@@ -16088,6 +16088,10 @@ object FormPrincipal: TFormPrincipal
     end
     object Cotaes1: TMenuItem
       Caption = 'Cota'#231#245'es'
+      object CotaoviaPortaldeTransportes2: TMenuItem
+        Caption = 'Via Portal de Transportes'
+        OnClick = CotaoviaPortaldeTransportes2Click
+      end
       object JadLog2: TMenuItem
         Caption = 'JadLog'
         OnClick = JadLog2Click
@@ -16102,6 +16106,9 @@ object FormPrincipal: TFormPrincipal
       end
       object NT1: TMenuItem
         Caption = 'TNT *'
+      end
+      object Loggi1: TMenuItem
+        Caption = 'Loggi *'
       end
     end
     object Sair1: TMenuItem
