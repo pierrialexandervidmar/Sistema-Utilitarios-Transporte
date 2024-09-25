@@ -15967,7 +15967,7 @@ object FormPrincipal: TFormPrincipal
     Anchors = [akBottom]
     Panels = <
       item
-        Text = 'Desenvolvido por Pierri Alexander Vidmar - Vers'#227'o: 01.00.02'
+        Text = 'Desenvolvido por Pierri Alexander Vidmar - Vers'#227'o: 01.00.03'
         Width = 350
       end
       item
