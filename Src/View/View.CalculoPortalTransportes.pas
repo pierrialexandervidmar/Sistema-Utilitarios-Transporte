@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, REST.Types, REST.Client,
-  Data.Bind.Components, Data.Bind.ObjectScope, System.JSON;
+  Data.Bind.Components, Data.Bind.ObjectScope, System.JSON,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls;
 
 type
   TCalculoPortalTransportes = class(TForm)
@@ -37,6 +38,7 @@ type
     RESTClient1: TRESTClient;
     RESTRequest1: TRESTRequest;
     RESTResponse1: TRESTResponse;
+    Image1: TImage;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure BtnConsultarClick(Sender: TObject);
     procedure BtnLimparClick(Sender: TObject);
