@@ -32,6 +32,7 @@ type
   private
     function GerarTokenBasic(const Usuario, Senha: string): string;
     function FormatJson(const JsonString: string): string;
+    function LimparTexto(const Text: string): string;
   public
     { Public declarations }
   end;
@@ -42,6 +43,14 @@ var
 implementation
 
 {$R *.dfm}
+
+function TConsultaOcorrenciaBraspress.LimparTexto(const Text: string): string;
+begin
+  Result := StringReplace(Text, '.', '', [rfReplaceAll]);
+  Result := StringReplace(Result, '-', '', [rfReplaceAll]);
+  Result := StringReplace(Result, '/', '', [rfReplaceAll]);
+  Result := StringReplace(Result, ' ', '', [rfReplaceAll]);
+end;
 
 function TConsultaOcorrenciaBraspress.GerarTokenBasic(const Usuario, Senha: string): string;
 var
@@ -77,7 +86,7 @@ begin
     Token := GerarTokenBasic(Trim(EditUsuario.Text), Trim(EditSenha.Text));
 
     URL := 'https://api.braspress.com/v3/tracking/byNf/' +
-           Trim(EditCNPJ.Text) + '/' +
+           Trim(LimparTexto(EditCNPJ.Text)) + '/' +
            Trim(EditNumeroNF.Text) + '/json';
 
     HttpClient.CustomHeaders['Authorization'] := 'Basic ' + Token;
