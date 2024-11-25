@@ -218,6 +218,14 @@
             <Form>ConsultaOcorrenciaSSW</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Src\View\View.ConsultaOcorrenciaTotalExpress.pas">
+            <Form>ConsultaOcorrenciaTotalExpress</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Src\View\View.AutenticarTotalExpress.pas">
+            <Form>TesteAutenticacaoTotalExpress</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

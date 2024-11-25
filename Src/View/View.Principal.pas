@@ -8,8 +8,7 @@ uses
   REST.Client, Data.Bind.Components, Data.Bind.ObjectScope, View.ConsultaCnpj, View.ConsultasMelhorEnvio, View.CalculoPortalTransportes,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls, View.ConsultaCredencialAzul, View.ConsultaServicosKangu, View.ConsultasServicosFlixLog, View.ConsultaOcorrenciaBuslog,
   View.TesteSSW, View.GerarTokenJWT, View.DeParaXmlCte, View.ConsultaOcorrenciaAzul, View.ConsultaOcorrenciaBraspress, View.ConsultaOcorrenciaDaytona, View.AutenticarCorreios,
-  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog, View.ConsultaOcorrenciaOpenlog, View.GeradorTwig, View.CotacaoOpenlogEngloba, View.ConsultaOcorrenciaCarriers, View.ConsultaOcorrenciaSSW;
-
+  View.ConsultaOcorrenciaJadlog, View.CotacaoJadlog, View.ConsultaOcorrenciaOpenlog, View.GeradorTwig, View.CotacaoOpenlogEngloba, View.ConsultaOcorrenciaCarriers, View.ConsultaOcorrenciaSSW, View.ConsultaOcorrenciaTotalExpress, View.AutenticarTotalExpress;
 type
   TFormPrincipal = class(TForm)
     MainMenu1: TMainMenu;
@@ -51,9 +50,10 @@ type
     NT1: TMenuItem;
     OpenlogEngloba1: TMenuItem;
     OpenlogEngloba2: TMenuItem;
-    otalExpress1: TMenuItem;
+    TotalExpress1: TMenuItem;
     CotaoviaPortaldeTransportes2: TMenuItem;
     Loggi1: TMenuItem;
+    esteAutenticaoTotalExpress1: TMenuItem;
     procedure Sair1Click(Sender: TObject);
     procedure ConsultaCNPJ1Click(Sender: TObject);
     procedure MelhorEnvio1Click(Sender: TObject);
@@ -80,6 +80,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure SSW1Click(Sender: TObject);
     procedure CotaoviaPortaldeTransportes2Click(Sender: TObject);
+    procedure TotalExpress1Click(Sender: TObject);
+    procedure esteAutenticaoTotalExpress1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -109,11 +111,11 @@ var
   FormCotacaoOpenlogEngloba: TCotacaoOpenlogEngloba;
   FormConsultaOcorrenciaCarriers: TConsultaOcorrenciaCarriers;
   FormConsultaOcorrenciaSSW: TConsultaOcorrenciaSSW;
+  FormConsultaOcorrenciaTotalExpress: TConsultaOcorrenciaTotalExpress;
+  FormAutenticarTotalExpress: TTesteAutenticacaoTotalExpress;
 implementation
 
 {$R *.dfm}
-
-
 
 
 
@@ -204,6 +206,16 @@ begin
     FormConsultaOcorrenciaDaytona.ShowModal;
   finally
     FormConsultaOcorrenciaDaytona.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.esteAutenticaoTotalExpress1Click(Sender: TObject);
+begin
+  FormAutenticarTotalExpress := TTesteAutenticacaoTotalExpress.Create(Self);
+  try
+    FormAutenticarTotalExpress.ShowModal;
+  finally
+    FormAutenticarTotalExpress.Free; // Libera a memória usada
   end;
 end;
 
@@ -309,6 +321,16 @@ begin
     FormCotacaoOpenlogEngloba.ShowModal;
   finally
     FormCotacaoOpenlogEngloba.Free; // Libera a memória usada
+  end;
+end;
+
+procedure TFormPrincipal.TotalExpress1Click(Sender: TObject);
+begin
+  FormConsultaOcorrenciaTotalExpress := TConsultaOcorrenciaTotalExpress.Create(Self);
+  try
+    FormConsultaOcorrenciaTotalExpress.ShowModal;
+  finally
+    FormConsultaOcorrenciaTotalExpress.Free; // Libera a memória usada
   end;
 end;
 

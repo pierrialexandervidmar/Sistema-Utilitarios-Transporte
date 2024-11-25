@@ -16023,6 +16023,10 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Teste de Autentica'#231#227'o Correios'
         OnClick = estedeAutenticaoCorreios1Click
       end
+      object esteAutenticaoTotalExpress1: TMenuItem
+        Caption = 'Validar Autentica'#231#227'o Total Express'
+        OnClick = esteAutenticaoTotalExpress1Click
+      end
       object ValidarCredencialAzul1: TMenuItem
         Caption = 'Validar Credencial da Azul'
         OnClick = ValidarCredencialAzul1Click
@@ -16082,8 +16086,9 @@ object FormPrincipal: TFormPrincipal
         Caption = 'SSW'
         OnClick = SSW1Click
       end
-      object otalExpress1: TMenuItem
-        Caption = 'Total Express *'
+      object TotalExpress1: TMenuItem
+        Caption = 'Total Express'
+        OnClick = TotalExpress1Click
       end
     end
     object Cotaes1: TMenuItem

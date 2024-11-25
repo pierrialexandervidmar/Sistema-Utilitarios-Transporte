@@ -23,7 +23,9 @@ uses
   View.GeradorTwig in 'Src\View\View.GeradorTwig.pas' {GeradorTwig},
   View.CotacaoOpenlogEngloba in 'Src\View\View.CotacaoOpenlogEngloba.pas' {CotacaoOpenlogEngloba},
   View.ConsultaOcorrenciaCarriers in 'Src\View\View.ConsultaOcorrenciaCarriers.pas' {ConsultaOcorrenciaCarriers},
-  View.ConsultaOcorrenciaSSW in 'Src\View\View.ConsultaOcorrenciaSSW.pas' {ConsultaOcorrenciaSSW};
+  View.ConsultaOcorrenciaSSW in 'Src\View\View.ConsultaOcorrenciaSSW.pas' {ConsultaOcorrenciaSSW},
+  View.ConsultaOcorrenciaTotalExpress in 'Src\View\View.ConsultaOcorrenciaTotalExpress.pas' {ConsultaOcorrenciaTotalExpress},
+  View.AutenticarTotalExpress in 'Src\View\View.AutenticarTotalExpress.pas' {TesteAutenticacaoTotalExpress};
 
 {$R *.res}
 
@@ -31,5 +33,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TConsultaOcorrenciaTotalExpress, ConsultaOcorrenciaTotalExpress);
+  Application.CreateForm(TTesteAutenticacaoTotalExpress, TesteAutenticacaoTotalExpress);
   Application.Run;
 end.
