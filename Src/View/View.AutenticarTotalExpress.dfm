@@ -12,6 +12,7 @@ object TesteAutenticacaoTotalExpress: TTesteAutenticacaoTotalExpress
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  KeyPreview = True
   Position = poMainFormCenter
   OnKeyDown = FormKeyDown
   TextHeight = 15
@@ -7813,8 +7814,6 @@ object TesteAutenticacaoTotalExpress: TTesteAutenticacaoTotalExpress
     Height = 616
     Align = alRight
     TabOrder = 0
-    ExplicitLeft = 417
-    ExplicitHeight = 528
   end
   object EditUsuario: TEdit
     Left = 25

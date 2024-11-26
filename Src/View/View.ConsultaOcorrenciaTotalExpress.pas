@@ -50,6 +50,7 @@ begin
   EditSenha.Clear;
   EditREID.Clear;
   EditNumeroNF.Clear;
+  DadosOcorrenciaTotal.Clear;
   EditUsuario.SetFocus;
 end;
 

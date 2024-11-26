@@ -12,6 +12,7 @@ object ConsultaOcorrenciaTotalExpress: TConsultaOcorrenciaTotalExpress
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  KeyPreview = True
   Position = poMainFormCenter
   OnKeyDown = FormKeyDown
   TextHeight = 15
@@ -7813,8 +7814,6 @@ object ConsultaOcorrenciaTotalExpress: TConsultaOcorrenciaTotalExpress
     Height = 677
     Align = alRight
     TabOrder = 0
-    ExplicitLeft = 424
-    ExplicitHeight = 711
   end
   object EditUsuario: TEdit
     Left = 25
