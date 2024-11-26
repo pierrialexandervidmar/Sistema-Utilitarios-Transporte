@@ -226,6 +226,10 @@
             <Form>TesteAutenticacaoTotalExpress</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Src\View\View.CotacaoTotalExpress.pas">
+            <Form>CotacaoTotalExpress</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -247,7 +251,6 @@
                     <Source Name="MainSource">CotarFrete.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\23.0\Bpl\frce.bpl">Fortes Report Comunity Edition</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>

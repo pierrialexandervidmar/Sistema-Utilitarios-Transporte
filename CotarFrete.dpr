@@ -25,7 +25,8 @@ uses
   View.ConsultaOcorrenciaCarriers in 'Src\View\View.ConsultaOcorrenciaCarriers.pas' {ConsultaOcorrenciaCarriers},
   View.ConsultaOcorrenciaSSW in 'Src\View\View.ConsultaOcorrenciaSSW.pas' {ConsultaOcorrenciaSSW},
   View.ConsultaOcorrenciaTotalExpress in 'Src\View\View.ConsultaOcorrenciaTotalExpress.pas' {ConsultaOcorrenciaTotalExpress},
-  View.AutenticarTotalExpress in 'Src\View\View.AutenticarTotalExpress.pas' {TesteAutenticacaoTotalExpress};
+  View.AutenticarTotalExpress in 'Src\View\View.AutenticarTotalExpress.pas' {TesteAutenticacaoTotalExpress},
+  View.CotacaoTotalExpress in 'Src\View\View.CotacaoTotalExpress.pas' {CotacaoTotalExpress};
 
 {$R *.res}
 
@@ -33,7 +34,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
-  Application.CreateForm(TConsultaOcorrenciaTotalExpress, ConsultaOcorrenciaTotalExpress);
-  Application.CreateForm(TTesteAutenticacaoTotalExpress, TesteAutenticacaoTotalExpress);
   Application.Run;
 end.

@@ -16109,6 +16109,10 @@ object FormPrincipal: TFormPrincipal
         Caption = 'Openlog / Engloba'
         OnClick = OpenlogEngloba2Click
       end
+      object otalExpress1: TMenuItem
+        Caption = 'Total Express'
+        OnClick = otalExpress1Click
+      end
       object NT1: TMenuItem
         Caption = 'TNT *'
       end
