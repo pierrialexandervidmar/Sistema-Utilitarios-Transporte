@@ -4,7 +4,7 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cotac'#227'o Total Express'
-  ClientHeight = 678
+  ClientHeight = 823
   ClientWidth = 962
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -30,8 +30,8 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     ParentFont = False
   end
   object Label1: TLabel
-    Left = 24
-    Top = 49
+    Left = 8
+    Top = 249
     Width = 36
     Height = 17
     Caption = 'Token'
@@ -43,8 +43,8 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 24
-    Top = 129
+    Left = 12
+    Top = 330
     Width = 73
     Height = 17
     Caption = 'CEP Destino'
@@ -56,8 +56,8 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 151
-    Top = 129
+    Left = 139
+    Top = 330
     Width = 29
     Height = 17
     Caption = 'Peso'
@@ -69,8 +69,8 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 280
-    Top = 129
+    Left = 268
+    Top = 330
     Width = 94
     Height = 17
     Caption = 'Valor Declarado'
@@ -82,8 +82,8 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 24
-    Top = 209
+    Left = 12
+    Top = 410
     Width = 37
     Height = 17
     Caption = 'Altura'
@@ -95,8 +95,8 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 151
-    Top = 209
+    Left = 139
+    Top = 410
     Width = 46
     Height = 17
     Caption = 'Largura'
@@ -108,8 +108,8 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 280
-    Top = 209
+    Left = 268
+    Top = 410
     Width = 84
     Height = 17
     Caption = 'Comprimento'
@@ -121,8 +121,8 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     ParentFont = False
   end
   object Image1: TImage
-    Left = 0
-    Top = 539
+    Left = -4
+    Top = 676
     Width = 436
     Height = 139
     Picture.Data = {
@@ -7846,18 +7846,58 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
       D6CC0000000049454E44AE426082}
     Stretch = True
   end
+  object Label3: TLabel
+    Left = 8
+    Top = 184
+    Width = 47
+    Height = 17
+    Caption = 'API Key'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 9
+    Top = 112
+    Width = 37
+    Height = 17
+    Caption = 'Senha'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 8
+    Top = 40
+    Width = 46
+    Height = 17
+    Caption = 'Usu'#225'rio'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object DadosCotataoTotalExpress: TMemo
     Left = 438
     Top = 0
     Width = 524
-    Height = 678
+    Height = 823
     Align = alRight
     ScrollBars = ssVertical
     TabOrder = 0
+    ExplicitHeight = 678
   end
   object BtnConsultar: TButton
-    Left = 24
-    Top = 312
+    Left = 12
+    Top = 513
     Width = 92
     Height = 33
     Caption = 'Consultar'
@@ -7865,72 +7905,91 @@ object CotacaoTotalExpress: TCotacaoTotalExpress
     OnClick = BtnConsultarClick
   end
   object BtnLimpar: TButton
-    Left = 138
-    Top = 312
+    Left = 126
+    Top = 513
     Width = 89
     Height = 33
     Caption = 'Limpar'
     TabOrder = 2
   end
   object EditToken: TEdit
-    Left = 24
-    Top = 72
+    Left = 8
+    Top = 272
     Width = 369
     Height = 23
     TabOrder = 3
   end
   object EditCep: TEdit
-    Left = 24
-    Top = 152
+    Left = 12
+    Top = 353
     Width = 105
     Height = 23
     TabOrder = 4
   end
   object EditPeso: TEdit
-    Left = 151
-    Top = 152
+    Left = 139
+    Top = 353
     Width = 106
     Height = 23
     TabOrder = 5
   end
   object EditValor: TEdit
-    Left = 280
-    Top = 152
+    Left = 268
+    Top = 353
     Width = 113
     Height = 23
     TabOrder = 6
   end
   object EditAltura: TEdit
-    Left = 24
-    Top = 232
+    Left = 12
+    Top = 433
     Width = 105
     Height = 23
     TabOrder = 7
   end
   object EditLargura: TEdit
-    Left = 151
-    Top = 232
+    Left = 139
+    Top = 433
     Width = 106
     Height = 23
     TabOrder = 8
   end
   object EditComprimento: TEdit
-    Left = 280
-    Top = 232
+    Left = 268
+    Top = 433
     Width = 113
     Height = 23
     TabOrder = 9
   end
+  object EditUsuario: TEdit
+    Left = 8
+    Top = 63
+    Width = 369
+    Height = 23
+    TabOrder = 10
+  end
+  object EditSenha: TEdit
+    Left = 8
+    Top = 135
+    Width = 369
+    Height = 23
+    TabOrder = 11
+  end
+  object EditAPIKey: TEdit
+    Left = 8
+    Top = 207
+    Width = 369
+    Height = 23
+    TabOrder = 12
+  end
   object NetHTTPClient1: TNetHTTPClient
     UserAgent = 'Embarcadero URI Client/1.0'
-    Left = 216
-    Top = 392
+    Left = 76
+    Top = 585
   end
   object NetHTTPRequest1: TNetHTTPRequest
-    ConnectionTimeout = 0
-    SendTimeout = 0
-    ResponseTimeout = 0
-    Left = 336
-    Top = 392
+    Client = NetHTTPClient1
+    Left = 212
+    Top = 585
   end
 end

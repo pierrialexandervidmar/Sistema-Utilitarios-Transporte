@@ -104,7 +104,7 @@ begin
     NetHTTPRequest1.CustomHeaders['apikey'] := ApiKeyFormatado;
     NetHTTPRequest1.CustomHeaders['token'] := TokenFormatado;
 
-    Response := NetHTTPRequest1.Post('https://api.godigibee.io/pipeline/totalexpress/v1/plataformas/encomendas/oauth', TStringStream.Create(BodyJSON.ToString));
+
 
     // Verificando o código de resposta
     if Response.StatusCode = 200 then
